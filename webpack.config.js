@@ -66,21 +66,25 @@ module.exports = {
       },
       {
         test: /\.(woff|ttf|svg|eot).*/,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[hash].[ext]',
-        },
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[path][name].[hash].[ext]',
+          }
+        }
       },
       {
         test: /\.(jpg|jpeg|svg|bmp|tiff|gif|png)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[hash].[ext]',
-        },
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[path][name].[hash].[ext]',
+          }
+        }
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({
+        use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: 'css-loader!resolve-url-loader!sass-loader?sourceMap',
         })
