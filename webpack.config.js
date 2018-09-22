@@ -4,14 +4,19 @@ const dotenv = require('dotenv');
 const webpack = require('webpack');
 const HTMLPlugin = require('html-webpack-plugin');
 const CleanPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 dotenv.load();
 
 const production = process.env.NODE_ENV === 'production';
 
 let plugins = [
-  new ExtractTextPlugin('bundle.css'),
+  new MiniCssExtractPlugin({
+    filename: "[name].css",
+    chunkFilename: "[id].css"
+  }),
   new HTMLPlugin({
     template: `${__dirname}/src/index.html`
   }),
@@ -26,23 +31,28 @@ let plugins = [
   })
 ];
 
-if(production) {
-  plugins = plugins.concat([
-    new webpack.optimize.UglifyJsPlugin({
+let optimizedPlugins = [
+  new UglifyJsPlugin({
+    uglifyOptions:{
       sourceMap: true,
       mangle: true,
       compress: {
         warnings: true
       }
-    }),
-    new CleanPlugin()
-  ]);
-}
+    }
+  }),
+  new OptimizeCssAssetsPlugin({}),
+  new CleanPlugin(),
+];
 
 module.exports = {
+  mode: production ? 'production' : 'development',
   entry: './src/index.jsx',
   devtool: production ? false : 'eval',
   plugins,
+  optimization: {
+    minimizer: optimizedPlugins
+  },
   output: {
     path: `${__dirname}/build`,
     filename: 'bundle.js'
@@ -52,13 +62,7 @@ module.exports = {
       {
         test: /.jsx?$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env', 'react'],
-            plugins: ['transform-class-properties']
-          }
-        }
+        use: 'babel-loader'
       },
       {
         test: /\.html$/,
@@ -66,28 +70,21 @@ module.exports = {
       },
       {
         test: /\.(woff|ttf|svg|eot).*/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[path][name].[hash].[ext]',
-          }
-        }
+        use: { loader: 'file-loader', options: { name: '[path][name].[hash].[ext]' } }
       },
       {
         test: /\.(jpg|jpeg|svg|bmp|tiff|gif|png)$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[path][name].[hash].[ext]',
-          }
-        }
+        use: { loader: 'file-loader', options: { name: '[path][name].[hash].[ext]' } }
       },
       {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader!resolve-url-loader!sass-loader?sourceMap',
-        })
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          production ? MiniCssExtractPlugin.loader : { loader: 'style-loader' },
+          { loader: "css-loader" },
+          { loader: "postcss-loader" },
+          { loader: "resolve-url-loader" },
+          { loader: 'sass-loader', options: { sourceMap: true } }
+        ]
       }
     ]
   }
