@@ -1,34 +1,32 @@
 import React, { Component } from 'react';
+import sanitizeHtml from 'sanitize-html';
 
 export default class PrototypeModal extends Component {
   constructor() {
     super();
-    this.show = this.show.bind(this);
-    this.close = this.close.bind(this);
-    this.createMarkup = this.createMarkup.bind(this);
     this.state = {
       modal: false,
       loading: false,
     }
   }
 
-  close() {
+  close = () => {
     this.setState({modal: false});
   }
 
-  show() {
+  show = () => {
     this.setState({modal: true, loading: true});
   }
 
-  createMarkup(htmlInput) {
-    return {__html: htmlInput};
+  createMarkup = (htmlInput) => {
+    return {__html: sanitizeHtml(htmlInput)};
   }
 
   render() {
     return (
       <div>
-        <div className={`${this.props.prototype.style}-click`} onClick={this.show}>
-          <div className={`show ${this.props.prototype.style}`}>{this.props.prototype.name}</div>
+        <div className={`${this.props.prototype.ref}-click`} onClick={this.show}>
+          <div className={`show ${this.props.prototype.ref}`}>{this.props.prototype.name}</div>
           <div className='hide'>{this.props.prototype.quickSummary}</div>
           <div className='glare'/>
         </div>
@@ -45,7 +43,7 @@ export default class PrototypeModal extends Component {
                   Close
                 </button>
 
-                <h2 className={`text-center ${this.props.prototype.style}`}>
+                <h2 className={`text-center ${this.props.prototype.ref}`}>
                   {this.props.prototype.name}
                 </h2>
               </div>

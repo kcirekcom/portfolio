@@ -7,13 +7,10 @@ import Navbar from './components/Navbar.jsx';
 import Home from './components/Home.jsx';
 import Visualization from './components/Visualization.jsx';
 import Prototype from './components/Prototype.jsx';
-// import Development from './components/Development.jsx';
-// import { Switch, Route } from 'react-router';
+import Development from './components/Development.jsx';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import './scss/main.scss';
-
-// const browserHistory = createBrowserHistory();
 
 render(
   <Router>
@@ -23,7 +20,7 @@ render(
         <Route exact path='/' component={Home}/>
         <Route exact path='/visualizations' component={Visualization}/>
         <Route exact path='/prototypes' component={Prototype}/>
-        {/* <Route path='/development' component={Development}/> */}
+        <Route path='/development' component={Development}/>
       </Switch>
     </div>
   </Router>,

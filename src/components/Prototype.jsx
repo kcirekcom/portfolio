@@ -11,13 +11,13 @@ export default class Prototype extends Component {
   }
   
   render() {
-    var prototypes = this.state.data.map((d, i) => <PrototypeModal prototype={d} key={i}/>);
+    var prototypes = this.state.data.map((d, i) => (d.category === 'development' ? null : <PrototypeModal prototype={d} key={i}/>));
 
     return (
       <div>
-        <h2 className='text-center'>
+        <h1 className='text-center'>
           Animated Prototypes
-        </h2>
+        </h1>
 
         {prototypes}
       </div>
