@@ -4,9 +4,9 @@ export default class Visualization extends Component {
   render() {
     return (
       <div>
-          <h2 className='text-center'>
-            Data Visualizations
-          </h2>
+        <h2 className='text-center'>
+          Data Visualizations
+        </h2>
 
         <div className='text-center'>
           <div className='data-img-section'>

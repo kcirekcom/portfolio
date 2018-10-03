@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import { render } from 'react-dom';
-import { createBrowserHistory } from 'history';
 import Navbar from './components/Navbar.jsx';
 import Home from './components/Home.jsx';
 import Visualization from './components/Visualization.jsx';
