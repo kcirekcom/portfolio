@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('app/scss/lib/fonts/icomoon.eot?1fdfw6');
+  src:  url('app/scss/lib/fonts/icomoon.eot?1fdfw6#iefix') format('embedded-opentype'),
+    url('app/scss/lib/fonts/icomoon.ttf?1fdfw6') format('truetype'),
+    url('app/scss/lib/fonts/icomoon.woff?1fdfw6') format('woff'),
+    url('app/scss/lib/fonts/icomoon.svg?1fdfw6#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+  content: "\e900";
+}
+.icon-profile:before {
+  content: "\e923";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-display:before {
+  content: "\e956";
+}
+.icon-stats-dots:before {
+  content: "\e99b";
+}
+.icon-insert-template:before {
+  content: "\ea72";
+}
+.icon-terminal:before {
+  content: "\ea81";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
