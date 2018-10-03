@@ -26,7 +26,7 @@ export default class PrototypeModal extends Component {
     return (
       <div>
         <div className={`${this.props.prototype.ref}-click`} onClick={this.show}>
-          <div className={`show ${this.props.prototype.ref}`}>{this.props.prototype.name}</div>
+          <div className={`show ${this.props.prototype.ref}`}><h2>{this.props.prototype.name}</h2></div>
           <div className='hide'>{this.props.prototype.quickSummary}</div>
           <div className='glare'/>
         </div>
@@ -43,9 +43,9 @@ export default class PrototypeModal extends Component {
                   Close
                 </button>
 
-                <h2 className={`text-center ${this.props.prototype.ref}`}>
+                <h1 className={`text-center ${this.props.prototype.ref}`}>
                   {this.props.prototype.name}
-                </h2>
+                </h1>
               </div>
 
               <div className='text-center modal-frame'>
