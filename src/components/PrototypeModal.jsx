@@ -1,3 +1,5 @@
+'use strict';
+
 import React, { Component } from 'react';
 import sanitizeHtml from 'sanitize-html';
 
@@ -14,7 +16,7 @@ export default class PrototypeModal extends Component {
     this.setState({modal: false});
   }
 
-  show = () => {
+  open = () => {
     this.setState({modal: true, loading: true});
   }
 
@@ -25,9 +27,9 @@ export default class PrototypeModal extends Component {
   render() {
     return (
       <div>
-        <div className={`${this.props.prototype.ref}-click`} onClick={this.show}>
-          <div className={`show ${this.props.prototype.ref}`}><h2>{this.props.prototype.name}</h2></div>
-          <div className='hide'>{this.props.prototype.quickSummary}</div>
+        <div className={`click-div click-div--${this.props.prototype.ref}`} onClick={this.open}>
+          <h2 className={`click-div__title ${this.props.prototype.ref}`}>{this.props.prototype.name}</h2>
+          <div className='click-div__copy'>{this.props.prototype.quickCopy}</div>
           <div className='glare'/>
         </div>
 
@@ -49,7 +51,7 @@ export default class PrototypeModal extends Component {
               </div>
 
               <div className='text-center modal-frame'>
-                <iframe className='artboard' src={this.props.prototype.embedLink} frameBorder='0' allowFullScreen></iframe>
+                <iframe className={`artboard ${(this.props.prototype.web == true ? '' : 'artboard--mobile')}`} src={this.props.prototype.embedLink} frameBorder='0' allowFullScreen></iframe>
               </div>
 
               <div className='info' dangerouslySetInnerHTML={this.createMarkup(this.props.prototype.desc)}/>                         

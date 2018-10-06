@@ -1,3 +1,5 @@
+'use strict';
+
 import React, { Component } from 'react';
 import DevelopmentModal from './DevelopmentModal.jsx';
 import modals from '../data/modals.json';

@@ -11,112 +11,83 @@
   box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
   font-family: $font-std;
   position: relative;
-display: block;
-
+  display: block;
+  
   .glare {
-      position: absolute;
-      width: 45px;
-      height: 100%;
-      background-color: rgba(255,255,255,0.3);
-      transform: skew(-7deg);
-      border-radius: 4px;
-      top: -0.25%;
-      right: 89%;
-
-      &:active {
-          opacity: 0.95;
-      }
+    visibility: hidden;
+    position: absolute;
+    width: 45px;
+    height: 100%;
+    background-color: rgba(255,255,255,0.3);
+    transform: skew(-7deg);
+    border-radius: 4px;
+    top: -0.25%;
+    right: 89%;
+    
+    &:active {
+      opacity: 0.95;
+    }
   }
+  
+  @include colors-list($colors);
+}
+
+.click-div__title {
+  font-size: $font-sm;
+  margin: 0 auto;
+}
+
+.click-div__copy {
+  display: none;
 }
 
 .click-div:hover {
   cursor: pointer;
   padding: 42px 15px;
-  background: $black;
   color: $white;
   border: none;
   position: relative;
 
-  .show {
-      display: none;
+  .click-div__title {
+    display: none;
   }
 
-  .hide {
-      display: inline-block;
-      font-size: 0.5em;
-      line-height: 25px;
+  .click-div__copy {
+    display: inline-block;
+    font-size: 0.5em;
+    line-height: 25px;
   }
 
   .glare {
-      right: -25%;
-      opacity: 0;
-      -webkit-transition: all 0.5s linear;
-      -moz-transition: all 0.5s linear;
-      transition: all 0.5s linear;
-  }
-}
-
-.abby-click, .checkboard-click, .gearshare-click, .novel-click, .crocs-click {
-  @extend .click-div;
-}
-
-.abby-click {
-
-  &:hover {
-      background: #472BA5;
-  }
-}
-
-.checkboard-click {
-
-  &:hover {
-      background: #4EBEAD;
-  }
-}
-
-.gearshare-click {
-
-  &:hover {
-      background: #A8CCEC;
-  }
-}
-
-.novel-click {
-
-  &:hover {
-      background: #F26C4F;
-  }
-}
-
-.crocs-click {
-
-  &:hover {
-      background: #2976AA;
+    visibility: visible;
+    right: -25%;
+    opacity: 0;
+    transition: all 0.5s linear;
   }
 }
 
 @media (max-width: 900px) {
   .click-div {
-      width: 350px;
-      background: rgba(0,0,0,0.1);
+    width: 350px;
+    background: rgba(0,0,0,0.1);
 
-      .glare {
-          display: none;
-      }
+    .glare {
+      display: none;
+    }
   }
 
   .click-div:hover {
-      padding: 50px;
-      border: $black 1px solid;
-      background: rgba(0,0,0,0.1);
-      color: $black;
+    padding: 50px;
+    border: $black 1px solid;
+    background: rgba(0,0,0,0.1);
+    color: $black;
 
-      .show {
-          display: block;
-      }
+    .click-div__title {
+      display: block;
+    }
 
-      .hide {
-          display: none;
-      }
+    .click-div__copy {
+      display: none;
+    }
   }
 }

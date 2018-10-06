@@ -1,6 +1,8 @@
+'use strict';
+
 import React, { Component } from 'react';
-import PrototypeModal from './PrototypeModal.jsx';
 import modals from '../data/modals.json';
+import PrototypeModal from './PrototypeModal.jsx';
 
 export default class Prototype extends Component {
   constructor(props) {

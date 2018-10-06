@@ -1,3 +1,5 @@
+'use strict';
+
 import React, { Component } from 'react';
 import sanitizeHtml from 'sanitize-html';
 
@@ -25,11 +27,10 @@ export default class DevelopmentModal extends Component {
   render() {
     var imgsArr = [];
     for (var i = 0; i < 5; i++) { 
-      console.log(i);
       imgsArr.push(this.props.development.ref);
     }
 
-    var clickImg = imgsArr.map((img, i) => (i !== 0) ?  null : <img className='click-img' key={i} src={require(`../assets/websites/${img}/${img}-${i}.png`)} alt=''/>);
+    var clickImg = imgsArr.map((img, i) => (i !== 0) ?  null : <img className='click-img' onClick={this.show} key={i} src={require(`../assets/websites/${img}/${img}-${i}.png`)} alt=''/>);
 
     var imgs = imgsArr.map((img, i) => <img className='img' key={i} src={require(`../assets/websites/${img}/${img}-${i}.png`)} alt=''/>);
 

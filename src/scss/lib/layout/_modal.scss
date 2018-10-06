@@ -11,152 +11,152 @@
   padding-bottom: 50px;
 
   .x {
-      display: block;
-      font-size: 25px;
-      padding: 5px 10px;
-      color: $white;
-      position: fixed;
-      right: 10px;
-      top: 10px;
-      border-radius: 4px;
-      border: 3px solid $white;
-      
-      &:hover {
-          cursor: pointer;
-          background: $black;
-      }
+    display: block;
+    font-size: 25px;
+    padding: 5px 10px;
+    color: $white;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    border-radius: 4px;
+    border: 3px solid $white;
+    
+    &:hover {
+      cursor: pointer;
+      background: $black;
+    }
   }
 
   .modal {
-      position: relative;
-      border-radius: 2px;
-      box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
-      background: #FFF;
+    position: relative;
+    border-radius: 2px;
+    box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
+    background: #FFF;
+    width: 600px;
+    height: 525px;
+    margin: 0 auto;
+    padding: 10px;
+    overflow: auto;
+
+    .modal-header {
+      position: fixed;
+      top: 50px;
       width: 600px;
-      height: 525px;
-      margin: 0 auto;
-      padding: 10px;
-      overflow: auto;
+      background: $white;
+      padding-top: 5px;
 
-      .modal-header {
-          position: fixed;
-          top: 50px;
-          width: 600px;
-          background: $white;
-          padding-top: 5px;
-
-          h2 {
-              margin-top: 10px;
-              margin-bottom: 10px;
-          }
-
-          .top {
-              position: absolute;
-              top: 20px;
-              right: 10px;
-          }
+      h1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
 
-      .modal-header-web {
-          @extend .modal-header;
-          width: 800px;
+      .top {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+      }
+    }
+
+    .modal-header-web {
+      @extend .modal-header;
+      width: 800px;
+    }
+
+    .modal-frame, .modal-frame-mobile {
+      margin-top: 50px;
+    }
+
+    .info, .info-dev, .info-dev-fre {
+      width: 80%;
+      margin: 0 auto 10px;
+      line-height: 25px;
+
+      p, span {
+        margin-top: 15px;
+        margin-bottom: 15px;
       }
 
-      .modal-frame, .modal-frame-mobile {
-          margin-top: 50px;
+      span {
+        display: block;
       }
-
-      .info, .info-dev, .info-dev-fre {
-          width: 80%;
-          margin: 0 auto 10px;
-          line-height: 25px;
-
-          p, span {
-              margin-top: 15px;
-              margin-bottom: 15px;
-          }
-
-          span {
-              display: block;
-          }
-      }
+    }
   }
 
   .modal-web {
-      @extend .modal;
-      width: 800px;
+    @extend .modal;
+    width: 800px;
 
-      .modal-frame {
-          margin-top: 40px;
-      }
+    .modal-frame {
+      margin-top: 40px;
+    }
   }
 
   @media (max-width: 900px) {
-      .modal-web {
-          width: 600px;
+    .modal-web {
+      width: 600px;
 
-          .modal-header-web {
-              width: 600px;
-          }
+      .modal-header-web {
+        width: 600px;
       }
+    }
 
-      .modal .top {
-          background: $black;
-          color: $white;
-      }
+    .modal .top {
+      background: $black;
+      color: $white;
+    }
 
-      .x {
-          display: none;
-      }
+    .x {
+      display: none;
+    }
   }
 
   @media (max-width: 650px) {
-      .modal {
-          width: 400px;
+    .modal {
+      width: 400px;
 
-          .modal-header {
-              width: 400px;
-              padding-top: 0px;
+      .modal-header {
+        width: 400px;
+        padding-top: 0px;
 
-              .top {
-                  position: relative;
-                  width: 95%;
-                  margin-bottom: 25px;
-                  margin-left: 20px;
-                  font-size: 15px;
-                  padding: 10px 0px;
-              }
-          }
-
-          .modal-frame {
-              display: none;
-          }
-
-          .modal-frame-mobile {
-              margin-top: 100px;
-          }
-
-          .info p:first-child {
-              display: none;
-          }
+        .top {
+          position: relative;
+          width: 95%;
+          margin-bottom: 25px;
+          margin-left: 20px;
+          font-size: 15px;
+          padding: 10px 0px;
+        }
       }
 
-      .modal-web .info {
-          margin-top: 110px;
+      .modal-frame {
+        display: none;
       }
+
+      .modal-frame-mobile {
+        margin-top: 100px;
+      }
+
+      .info p:first-child {
+        display: none;
+      }
+    }
+
+    .modal-web .info {
+      margin-top: 110px;
+    }
   }
 
   @media (max-width: 450px) {
-      .modal {
-          width: 300px;
+    .modal {
+      width: 300px;
 
-          .modal-header {
-              width: 300px;
+      .modal-header {
+        width: 300px;
 
-              .top {
-                  margin-left: 18px;
-              }
-          }
+        .top {
+          margin-left: 18px;
+        }
       }
+    }
   }
 }

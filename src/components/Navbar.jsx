@@ -1,3 +1,5 @@
+'use strict';
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -5,11 +7,11 @@ export default class Navbar extends Component {
   render() {
     return (
       <nav>
-        <h1 className='nav-brand name'>
+        <p className='nav-brand name'>
           <a href='/'>
             Erick F. Mock
           </a>
-        </h1>
+        </p>
 
         <div className='responsive'>
           <ul>

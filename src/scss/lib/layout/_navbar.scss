@@ -6,35 +6,35 @@
   z-index: 1000;
 
   .nav-link-anchor {
-      text-align: center;
-      color: $black;
-      text-decoration: none;
-      display: block;
-      height: $navheight;
-      line-height: $navheight;
-      font-size: $font-sm;
+    text-align: center;
+    color: $black;
+    text-decoration: none;
+    display: block;
+    height: $navheight;
+    line-height: $navheight;
+    font-size: $font-sm;
 
-      &:hover {
-          background: $black;
-          color: $white;
-      }
+    &:hover {
+      background: $black;
+      color: $white;
+    }
   }
 
   .proto:hover .preview-proto, .dev:hover .preview-dev, .viz:hover .preview-viz {
-      background: $black;
-      position: absolute;
-      display: block;
-      top: 0;
-      right: 100%;
+    background: $black;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 100%;
 
-      width: 225%;
-      padding: 0 6%;
+    width: 225%;
+    padding: 0 6%;
 
-      z-index: 1000;
+    z-index: 1000;
 
-      .img-preview {
-          width: 90%;
-      }
+    .img-preview {
+      width: 90%;
+    }
   }
 }
 
@@ -47,31 +47,17 @@
   z-index: 1000;
 
   a {
-      font-size: $font-sm + 0.5em;
-      text-decoration: none;
-      display: block;
-      height: $navheight;
-      line-height: $navheight;
-      color: $black;
+    font-size: $font-sm + 0.5em;
+    text-decoration: none;
+    display: block;
+    height: $navheight;
+    line-height: $navheight;
+    color: $black;
 
-      .main-imageholder img {
-          display: none;
-          width: 200px;
-          height: 200px;
-          border-radius: 50%;
-          box-sizing: border-box;
-          border: 10px solid black;
-          margin: 0 auto;
-      }
-
-      &:hover {
-          background: $black;
-          color: $white;
-      }
-
-      &:hover .main-imageholder img {
-          display: block;
-      }
+    &:hover {
+      background: $black;
+      color: $white;
+    }
   }
 }
 
@@ -81,98 +67,90 @@
 
 @media (max-width: 1050px) {
   .nav-links {
-      right: 35px;
+    right: 35px;
 
-      .proto:hover .preview-proto, .dev:hover .preview-dev, .viz:hover .preview-viz {
-         padding: 0 10%; 
-      }
+    .proto:hover .preview-proto, .dev:hover .preview-dev, .viz:hover .preview-viz {
+      padding: 0 10%; 
+    }
   }
 }
 
 @media (max-width: 1050px) {
   .nav-brand {
-      left: 35px;
-      width: 17%;
+    left: 35px;
+    width: 17%;
 
-      a {
-         font-size: $font-sm + 0.25em; 
-
-         .main-imageholder img {
-             width: 150px;
-             height: 150px;
-         }
-      }
+    a {
+      font-size: $font-sm + 0.25em; 
+    }
   }
 }
 
 @media (max-width: 900px) {
   .nav-brand, .nav-links {
-      display: none;
+    display: none;
   }
 
   .responsive {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      display: block;
-      background: $black;
-      height: $navheight;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: block;
+    background: $black;
+    height: $navheight;
 
-      ul {
-          width: 75%;
-          margin: 0 auto;
-          text-align: center;
+    ul {
+      width: 75%;
+      margin: 0 auto;
+      text-align: center;
 
-          li {
-              display: inline-block;
-              width: 100px;
+      li {
+        display: inline-block;
+        width: 100px;
 
-              a {
-                  color: $white;
-                  text-decoration: none;
-                  display: inline-block;
-                  height: $navheight;
-                  line-height: $navheight;
-                  padding-left: 35px;
-                  padding-right: 35px;
-                  font-size: 30px;
+        a {
+          color: $white;
+          text-decoration: none;
+          display: inline-block;
+          height: $navheight;
+          line-height: $navheight;
+          padding-left: 35px;
+          padding-right: 35px;
+          font-size: 30px;
 
-                  &:hover {
-                      cursor: pointer;
-                      background: $white;
-                      color: $black;
-                  }
-              }
+          &:hover {
+            cursor: pointer;
+            background: $white;
+            color: $black;
           }
+        }
       }
+    }
   }
 }
 
 @media (max-width: 550px) {
   .responsive {
 
-      ul {
-          width: 90%;
+    ul {
+      width: 90%;
 
-          li {
-              width: 75px;
+      li {
+        width: 75px;
 
-              a {
-                  padding-left: 17px;
-                  padding-right: 17px;
-                  font-size: 40px;
-              }
-          }
+        a {
+          padding-left: 17px;
+          padding-right: 17px;
+          font-size: 40px;
+        }
       }
+    }
   }
 }
 
 @media (max-width: 350px) {
-  .responsive {
-
-      ul {
-          width: 100%;
-      }
+  .responsive ul {
+    width: 100%;
   }
 }

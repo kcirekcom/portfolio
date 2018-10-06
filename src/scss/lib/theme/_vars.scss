@@ -2,6 +2,30 @@
 $black: #000;
 $white: #fff;
 
+// *** map variable ***
+$colors: (
+  abby: #472BA5,
+  checkboard: #4EBEAD,
+  gearshare: #A8CCEC,
+  novel: #F26C4F,
+  crocs: #2976AA
+);
+
+// Mixin to map colors
+@mixin colors-list($map) {
+  @each $color-name, $color in $map {
+    @if not map-has-key($map, $color-name) {
+      @warn "'#{$color-name}' is not a valid color name";
+    }
+
+    @else {
+      &--#{$color-name}:hover {
+        background: $color;
+      }
+    } 
+  }
+}
+
 // *** box-sizes ***
 $box-std: 40%;
 $box-sm: $box-std / 2;

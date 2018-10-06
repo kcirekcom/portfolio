@@ -1,10 +1,10 @@
-h2 {
+h1 {
   margin-top: 45px;
   margin-bottom: 45px;
   font-size: $font-std;
 }
 
-h3 {
+h2 {
   margin-top: 30px;
   margin-bottom: 15px;
   font-size: $font-sm;
@@ -14,34 +14,22 @@ h3 {
   text-align: center;
 }
 
-.hide {
+.preview-proto, .preview-dev, .preview-viz {
   display: none;
 }
 
-.preview-proto, .preview-dev, .preview-viz {
-  @extend .hide;
-}
-
-.show {
-  display: block;
-}
-
-.modal-frame, .modal-frame-codepen {
+.modal-frame {
   margin: 15px auto;
-
-  .artboard {
-      width: 775px;
-      height: 450px;
-  }
+  height: 100%;
 }
 
-.modal-frame-mobile {
-  margin: 15px auto;
+.artboard {
+  height: 100%;
+  width: 775px;
+}
 
-  .artboard-mobile {
-      width: 350px;
-      height: 450px;
-  }
+.artboard--mobile {
+  width: 275px;
 }
 
 .iframe {
@@ -62,8 +50,8 @@ button {
   padding: 5px 10px;
 
   &:hover {
-      background: $black;
-      color: $white;
+    background: $black;
+    color: $white;
   }
 }
 
@@ -97,78 +85,78 @@ button {
   font-size: $font-std - 0.5em; 
 }
 
-.montserrat {
+.crocs {
   font-family: 'Montserrat', sans-serif;
   font-weight: bolder;
 }
 
 @media (max-width: 1050px) {
   .iframe {
-      width: 475px;
-      height: 275px;
+    width: 475px;
+    height: 275px;
   }
 }
 
 @media (max-width: 900px) {
   .iframe {
-      width: 400px;
-      height: 350px;
+    width: 400px;
+    height: 350px;
   }
 }
 
 @media (max-width: 450px) {
   .iframe {
-      width: 350px;
-      height: 300px;
+    width: 350px;
+    height: 300px;
   }
 }
 
 @media (max-width: 900px) {
   h2 {
-      margin-top: 120px;
+    margin-top: 120px;
   }
 
   .modal-frame, .modal-frame-codepen {
 
-      .artboard {
-          width: 575px;
-      }
+    .artboard {
+      width: 575px;
+    }
   }
 }
 
 @media (max-width: 650px) {
   .modal-frame, .modal-frame-codepen {
 
-      .artboard {
-          width: 375px;
-      }
+    .artboard {
+      width: 375px;
+    }
   }
 
   .modal-frame-mobile {
       
-      .artboard-mobile {
-          width: 300px;
-      }
+    .artboard-mobile {
+      width: 300px;
+    }
   }
 
   button {
-      background: $black;
-      color: $white;
+    background: $black;
+    color: $white;
   }
 }
 
 @media (max-width: 450px) {
   .modal-frame, .modal-frame-codepen {
 
-      .artboard {
-          width: 275px;
-      }
+    .artboard {
+      width: 275px;
+    }
   }
 
   .modal-frame-mobile {
       
-      .artboard-mobile {
-          width: 275px;
-      }
+    .artboard-mobile {
+      width: 275px;
+    }
   }
 }
