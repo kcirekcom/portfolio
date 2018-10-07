@@ -2,7 +2,7 @@
   {
     "name": "ABBY",
     "ref": "abby",
-    "quickSummary": "Mobile application idea/design for rating mobile interface mockups and reporting A/B testing results.",
+    "quickCopy": "Mobile application idea/design for rating mobile interface mockups and reporting A/B testing results.",
     "desc" : "<p>Click around to navigate. Any possible interactions will highlight blue when you click onto the artboard above.</p><p>Click <a href='https://xd.adobe.com/view/b6524554-a2bb-41d2-afe1-194e32511713/' target='_blank'>HERE</a> for a slideshow view.</p><p>Users are initially welcomed by ABBY and her accommodating greeting. This landing view provides users with three main options to move forward, including a login and signup option. The third option is a code input intended for users that are invited by companies to rate interface mockups.</p><p>FOR USER TESTERS: After inputting a code, users are directed to a terms and conditions screen. Scrolling to the bottom of this screen populates accept and reject buttons. If accepted, users are guided comfortably through the testing features and input sections.</p><p>FOR COMPANY USERS: After successful login and/or signup, this application displays a tab bar that navigates three main views. The first view is an interface designed for uploading the interface mockups. The second view displays any data and results from that company's A/B tests. The third view is designed to be a tool that generates codes for user testers and tracks their completion status. There is also a settings icon in the top right corner of the title header for users to access helpful tools and information at any point during a session.</p>",
     "embedLink": "https://xd.adobe.com/embed/b6524554-a2bb-41d2-afe1-194e32511713/",
     "category" : "prototype",
@@ -11,16 +11,16 @@
   {
     "name": "the checkboard",
     "ref": "checkboard",
-    "quickSummary": "Mobile application idea/design for goal setting and personal accountability.",
+    "quickCopy": "Mobile application idea/design for goal setting and personal accountability.",
     "desc" : "<p>Click around to navigate. Any possible interactions will highlight blue when you click onto the artboard above.</p><p>Click <a href='https://xd.adobe.com/view/dc1a78f8-80ad-4b3c-a922-b66fc7ad3f6f/' target='_blank'>HERE</a> for a slideshow view.</p><p>This mobile prototype has a basic landing view with signup and login buttons. Both of the signup and login screens can navigate back to the landing view by clicking on either the main title or logo icon.</p><p>If users sign up, they are greeted by an introduction modal personalized with their name. Currently, this is the only feedback interaction, but I intend on building more to guide users through the process of sharing their goals.</p><p>Personal and starred goals sections are listed under the goal sharing section. Users have the option to mark their goals as completed by clicking on the checkmark icon to the right of each goal. Users can navigate the application via the tab bar that 1) fills in the clicked icon and 2) rotates that icon to the center of the bar. This is meant to help users identify exactly which view they are looking at. The best part about this prototype is the vertical search bar displayed in the search view. It provides users with options to search a keyword or click on category icons, which are the same set of icons that must be selected before sharing a goal.</p>",
-    "embedLink": "https://xd.adobe.com/view/dc1a78f8-80ad-4b3c-a922-b66fc7ad3f6f/",
+    "embedLink": "https://xd.adobe.com/embed/dc1a78f8-80ad-4b3c-a922-b66fc7ad3f6f/",
     "category" : "prototype",
     "web" : false
   },
   {
     "name": "GEARSHARE",
     "ref": "gearshare",
-    "quickSummary": "Original design concept for the GEARSHARE web application I contributed to.",
+    "quickCopy": "Original design concept for the GEARSHARE web application I contributed to.",
     "desc" : "<p>Click around to navigate. Any possible interactions will highlight blue when you click onto the artboard above.</p><p>Click <a href='https://xd.adobe.com/view/ebca570e-b6c9-4d5d-9f4c-a59af87a5212/' target='_blank'>HERE</a> for a slideshow view.</p><p>This web application was fun to wireframe and actually build out with some of my colleagues. Although the product doesn't look like the artboard slides, I learned so much from this process of collaborating with other individuals. Not everything can be implemented within a specific timeframe, and some things will be scratched completely because they may not align with a company vision. This is a valuable process that I have no hard feelings for.</p><p>There are still a few similarities between this mockup and the built-out product. The first is the landing view that includes both sign in and sign up components in one place, so users don't have to navigate between views to do either. The second is the navbar that is displayed once users are redirected internally, which features a \"new post\" button. This allows users to post at any point during a session. The final similarity is the filtering option for ski, snowboard and soft goods. The core filtering functionality is there with some added options in the built-out product.</p>",
     "embedLink": "https://xd.adobe.com/embed/ebca570e-b6c9-4d5d-9f4c-a59af87a5212/",
     "category" : "prototype",
@@ -29,7 +29,7 @@
   {
     "name": "novel+novel",
     "ref": "novel",
-    "quickSummary": "Web application idea/design for social networking between writers and publishers/agents.",
+    "quickCopy": "Web application idea/design for social networking between writers and publishers/agents.",
     "desc" : "<p>Click around to navigate. Any possible interactions will highlight blue when you click onto the artboard above.</p><p>Click <a href='https://xd.adobe.com/view/15575dd3-62a3-42f3-9921-3d1aed19ea0a/' target='_blank'>HERE</a> for a slideshow view.</p><p>A lot still has to be fleshed out in this prototype, including the user flow for agents and publishers. This prototype isn't intended to behave like a normal web application. That being said, several feedback interactions must be built in to guide users throughout the application and to avoid mass amounts of confusion. This instruction and feedback would be activated for writers, agents and publishers that have recently registered.</p><p>The idea is to have users navigate via the circular buttons and bold words. The buttons open and close modal extensions. Clicking on bold words will either save the state of data in an extension, or direct users to a new section/portal. After login and signup, pen names are displayed in the center of the main \"plus sign\" modal. If users navigate to a new section, the title of that section is then listed in the center.</p>",
     "embedLink": "https://xd.adobe.com/embed/15575dd3-62a3-42f3-9921-3d1aed19ea0a/",
     "category" : "prototype",
@@ -38,8 +38,8 @@
   {
     "name": "crocs redesign",
     "ref": "crocs",
-    "quickSummary": "THIS IS ONLY A PERSONAL PROJECT. I was not contracted by Crocs to do this.",
-    "desc" : "<p>Click around to navigate. Any possible interactions will highlight blue when you click onto the artboard above. Scroll down on the landing page to view interactions linked to the orange classic clog image under the \"Recommended Just For You\" section.</p><p>Click <a href='https://xd.adobe.com/view/c1d822e9-a4a2-472e-ae32-ae528cd03489/' target='_blank'>HERE</a> for a slideshow view.</p><p>***I WAS NOT CONTRACTED BY CROCS TO DO THIS.***</p><p>I just saw this as a fun opportunity to wireframe new features and reorganize some of the landing page content for this major retail website. Differentiated content is designated by the green rectangles. The new features include a toggleable navbar and a reimagined image slider. In this personal project, I prototyped the features and then built out the functionality for the image slider in the CODEPEN editor below. The image slider is enabled automatically and has clickable thumbnail images that appear in the center container when selected. The center container also has zoomable functionality. For a better view, click on the \"Edit on CODEPEN\" link in the upper right of the editor.</p><div className='text-center modal-frame-codepen'><iframe className='artboard' scrolling='no' title='slider + zoom' src='//codepen.io/kcire_kcom/embed/pwezOQ/?height=265&theme-id=0&default-tab=js,result&embed-version=2' frameBorder='no' allowTransparency='true' allowFullScreen='true'></iframe></div>",
+    "quickCopy": "THIS IS ONLY A PERSONAL PROJECT. I was not contracted by Crocs to do this.",
+    "desc" : "<p>Click around to navigate. Any possible interactions will highlight blue when you click onto the artboard above. Scroll down on the landing page to view interactions linked to the orange classic clog image under the \"Recommended Just For You\" section.</p><p>Click <a href='https://xd.adobe.com/view/c1d822e9-a4a2-472e-ae32-ae528cd03489/' target='_blank'>HERE</a> for a slideshow view.</p><p>***I WAS NOT CONTRACTED BY CROCS TO DO THIS.***</p><p>I just saw this as a fun opportunity to wireframe new features and reorganize some of the landing page content for this major retail website. Differentiated content is designated by the green rectangles. The new features include a toggleable navbar and a reimagined image slider. In this personal project, I prototyped the features and then built out the functionality for the image slider in the CODEPEN editor below. The image slider is enabled automatically and has clickable thumbnail images that appear in the center container when selected. The center container also has zoomable functionality. For a better view, click on the \"Edit on CODEPEN\" link in the upper right of the editor.</p>",
     "embedLink": "https://xd.adobe.com/embed/c1d822e9-a4a2-472e-ae32-ae528cd03489/",
     "category" : "prototype",
     "web" : true
@@ -47,7 +47,7 @@
   {
     "name": "FREMONT PATROLLER",
     "ref": "fremont",
-    "quickSummary": null,
+    "quickCopy": null,
     "desc" : "<p>Click <a href='http://fremont-bike-patroller.herokuapp.com' target='_blank'>HERE</a> to view this website.</p><p>This application provides daily estimates of bike traffic at the Fremont Bridge. Individuals can check the traffic for each day from the past three years, or choose a date range. This application uses seattle.gov’s Socrata (SODA) API.</p>",
     "embedLink": null,
     "category" : "development",
@@ -56,7 +56,7 @@
   {
     "name": "GEARSHARE",
     "ref": "gearshare",
-    "quickSummary": null,
+    "quickCopy": null,
     "desc" : "<p>Click <a href='https://gear-share-staging.herokuapp.com' target='_blank'>HERE</a> to view this website.</p><p>This application is a marketplace for outdoor winter gear available for rent. The purpose of this application is to connect travelers, beginners, and adventurers with local gear enthusiasts.</p>",
     "embedLink": null,
     "category" : "development",
@@ -65,7 +65,7 @@
   {
     "name": "MRS papers",
     "ref": "mrspapers",
-    "quickSummary": null,
+    "quickCopy": null,
     "desc" : "<p>Click <a href='http://www.mrspapers.com' target='_blank'>HERE</a> to view this website.</p><p>This application is a self-publishing platform. It delivers transactions to an API that I built, which allows the user to create and modify a manuscript by adding, updating and deleting chapters. This site has the scalability to include many users, but it is currently deployed for personal use only.</p>",
     "embedLink": null,
     "category" : "development",

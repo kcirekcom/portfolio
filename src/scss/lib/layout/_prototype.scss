@@ -1,0 +1,93 @@
+.click-div {
+  margin: 15px auto;
+  width: 400px;
+  padding: 50px;
+  background: $white;
+  text-align: center;
+  font-size: $font-std;
+  box-sizing: border-box;
+  border: $black 1px solid;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
+  font-family: $font-std;
+  position: relative;
+  display: block;
+  
+  .glare {
+    visibility: hidden;
+    position: absolute;
+    width: 45px;
+    height: 100%;
+    background-color: rgba(255,255,255,0.3);
+    transform: skew(-7deg);
+    border-radius: 4px;
+    top: -0.25%;
+    right: 89%;
+    
+    &:active {
+      opacity: 0.95;
+    }
+  }
+  
+  @include colors-list($colors);
+}
+
+.click-div__title {
+  font-size: $font-sm;
+  margin: 0 auto;
+}
+
+.click-div__copy {
+  display: none;
+}
+
+.click-div:hover {
+  cursor: pointer;
+  padding: 42px 15px;
+  color: $white;
+  border: none;
+  position: relative;
+
+  .click-div__title {
+    display: none;
+  }
+
+  .click-div__copy {
+    display: inline-block;
+    font-size: 0.5em;
+    line-height: 25px;
+  }
+
+  .glare {
+    visibility: visible;
+    right: -25%;
+    opacity: 0;
+    transition: all 0.5s linear;
+  }
+}
+
+@media (max-width: 900px) {
+  .click-div {
+    width: 350px;
+    background: rgba(0,0,0,0.1);
+
+    .glare {
+      display: none;
+    }
+  }
+
+  .click-div:hover {
+    padding: 50px;
+    border: $black 1px solid;
+    background: rgba(0,0,0,0.1);
+    color: $black;
+
+    .click-div__title {
+      display: block;
+    }
+
+    .click-div__copy {
+      display: none;
+    }
+  }
+}

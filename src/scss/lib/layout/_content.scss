@@ -1,0 +1,20 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0 0 90px;
+  font-family: $font-primary;
+  
+  background-image: url(../../../assets/snow.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+main {
+  min-height: 100%;
+  width: 100%;
+}

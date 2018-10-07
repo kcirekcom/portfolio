@@ -1,0 +1,47 @@
+.about-info {
+  width: 40%;
+  margin: 150px auto;
+  line-height: 25px;
+}
+
+.social {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.social__link {
+  display: inline-block;
+  width: 75px;
+
+  a {
+    color: rgba(0,0,0,0.1);
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+
+    &:hover {
+      color: $black;
+      transition: all 0.6s ease;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .about-info {
+    width: 75%;
+    margin: 200px auto;
+  }
+
+  .social__link a {
+    color: $black;
+    transition: none !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .about-info {
+    width: 75%;
+    margin: 120px auto;
+  }
+}

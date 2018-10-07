@@ -1,0 +1,81 @@
+h1 {
+  margin-top: 45px;
+  margin-bottom: 45px;
+  font-size: $font-std;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: $font-sm;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.preview-proto, .preview-dev, .preview-viz {
+  display: none;
+}
+
+.btn {
+  cursor: pointer;
+  border: $black;
+  border-radius: 3px;
+  background: $white;
+  color: $black;
+  padding: 5px 10px;
+
+  &:hover {
+    background: $black;
+    color: $white;
+  }
+}
+
+.abby {
+  font-family: 'Baloo Da', cursive;
+}
+
+.checkboard {
+  font-family: 'Chalkboard', sans-serif;
+}
+
+.gearshare {
+  font-family: 'Rhodium Libre', serif;
+}
+
+.novel {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.mrspapers {
+  font-family: 'Delius', cursive;
+}
+
+.fremont {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 2px;
+}
+
+.name {
+  font-family: 'Qwigley', cursive;
+  font-size: $font-std - 0.5em; 
+}
+
+.crocs {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+}
+
+@media (max-width: 900px) {
+  h1 {
+    margin-top: 120px;
+  }
+}
+
+@media (max-width: 650px) {
+  .btn {
+    background: $black;
+    color: $white;
+  }
+}

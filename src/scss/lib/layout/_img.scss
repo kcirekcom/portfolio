@@ -1,0 +1,144 @@
+.click-img {
+  display: block;
+  margin: 15px auto;
+  width: 560px;
+  box-shadow: 0px 2px 1px rgba(0,0,0,0.1);
+
+  &:hover {
+    cursor: pointer;
+    outline: rgba(0,0,0,0.1) 10px solid;
+    transition: all 0.4s ease;
+  }
+}
+
+.visuals-section {
+  display: block;
+  margin: 15px auto;
+  width: 560px;
+}
+
+.visual {
+  position: relative;
+
+  &:hover .visual__link {
+    background: blue;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+  }
+}
+
+.visual__link {
+  font-size: $font-lg - 1em;
+  text-decoration: none;
+  color: $white;
+  font-weight: bold;
+  background: rgba(0,0,0,0.7);
+  border-radius: 4px;
+  padding: 5%;
+
+  position: absolute;
+  top: 39%;
+  left: 17%;
+}
+
+.visual__link--ca {
+  top: 38%;
+}
+
+.visual__img {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
+}
+
+.visual__iframe {
+  display: block;
+  width: 560px;
+  height: 315px;
+  margin: 15px auto;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
+}
+
+.slideshow {
+  width: 97%;
+  margin: 50px auto 0px;
+}
+
+.slideshow__img {
+  display: block;
+  width: 100%;
+  margin: 15px auto;
+  box-sizing: border-box;
+  border: $black 1px solid;
+}
+
+@media (max-width: 1050px) {
+  .click-img {
+      width: 475px;
+  }
+
+  .visuals-section {
+    width: 475px;
+  }
+
+  .visual__link {
+    left: 12%;
+  }
+
+  .visual__iframe {
+    width: 475px;
+    height: 275px;
+  }
+}
+
+@media (max-width: 900px) {
+  .click-img {
+    width: 400px;
+
+    &:hover {
+      outline: none;
+      transition: none !important;
+    }
+  }
+
+  .visuals-section {
+    width: 400px;
+  }
+
+  .visual__link {
+    left: 19%;
+    background: blue;
+    font-size: $font-std;
+  }
+
+  .visual__iframe {
+    width: 400px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 650px) {
+  .slideshow {
+    margin: 110px auto 0px;
+  }
+}
+
+@media (max-width: 450px) {
+  .click-img {
+    width: 350px;
+  }
+
+  .visuals-section {
+    width: 350px;
+  }
+
+  .visual__link {
+    left: 16%;
+  }
+
+  .visual__iframe {
+    width: 350px;
+    height: 300px;
+  }
+}

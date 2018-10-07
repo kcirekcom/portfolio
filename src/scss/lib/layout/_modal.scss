@@ -1,0 +1,169 @@
+.modal-bg {
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  overflow: auto;
+  padding-bottom: 50px;
+}
+
+.modal-bg__btn {
+  display: block;
+  font-size: 25px;
+  padding: 5px 10px;
+  color: $white;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  border-radius: 4px;
+  border: 3px solid $white;
+  
+  &:hover {
+    cursor: pointer;
+    background: $black;
+  }
+}
+
+.modal {
+  position: relative;
+  border-radius: 2px;
+  box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
+  background: #FFF;
+  width: 600px;
+  height: 525px;
+  margin: 0 auto;
+  padding: 10px;
+  overflow: auto;
+}
+
+.modal--web {
+  width: 800px;
+}
+
+.modal__header {
+  position: fixed;
+  top: 50px;
+  width: 600px;
+  background: $white;
+  padding-top: 5px;
+}
+
+.modal__header--web {
+  width: 800px;
+}
+
+.modal__title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.modal__btn {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+// .modal__frame {
+//   margin-top: 40px;
+// }
+
+.modal__frame {
+  margin: 15px auto;
+  height: 100%;
+
+  .artboard {
+    height: 100%;
+    width: 775px;
+  }
+}
+
+.modal__frame--mobile .artboard {
+  width: 275px;
+}
+
+.modal__info {
+  width: 80%;
+  margin: 0 auto 10px;
+  line-height: 25px;
+
+  p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .modal--web,
+  .modal__header--web {
+    width: 600px;
+  }
+
+  .modal__btn {
+    background: $black;
+    color: $white;
+  }
+
+  .modal-bg__btn {
+    display: none;
+  }
+
+  .modal__frame .artboard {
+    width: 575px;
+  }
+
+  .modal__frame--mobile .artboard {
+    width: 275px;
+  }
+}
+
+@media (max-width: 650px) {
+  .modal,
+  .modal__header {
+    width: 400px;
+  }
+
+  .modal__header {
+    padding-top: 0px;
+  }
+
+  .modal__btn {
+    position: relative;
+    width: 95%;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    font-size: 15px;
+    padding: 10px 0px;
+  }
+
+  .modal__frame {
+    display: none;
+  }
+
+  .modal__frame--mobile {
+    margin-top: 100px;
+  }
+
+  .modal__info p:first-child {
+    display: none;
+  }
+
+  .modal__info {
+    margin-top: 110px;
+  }
+}
+
+@media (max-width: 450px) {
+  .modal, 
+  .modal__header {
+    width: 300px;
+  }
+
+  .modal__btn {
+    margin-left: 18px;
+  }
+}
+

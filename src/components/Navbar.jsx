@@ -1,3 +1,5 @@
+'use strict';
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -5,51 +7,51 @@ export default class Navbar extends Component {
   render() {
     return (
       <nav>
-        <h1 className='nav-brand name'>
-          <a href='/'>
+        <p className='nav-brand name'>
+          <Link to='/'>
             Erick F. Mock
-          </a>
-        </h1>
+          </Link>
+        </p>
 
         <div className='responsive'>
           <ul>
-            <li><a href='/' className='icon-profile'/></li>
-            <li><Link className='icon-insert-template' to='/prototypes'/></li>
-            <li><Link className='icon-terminal' to='/development'/></li>
-            <li><Link className='icon-stats-dots' to='/visualizations'/></li>
+            <li className='responsive__link'><Link className='icon-profile' to='/'/></li>
+            <li className='responsive__link'><Link className='icon-insert-template' to='/prototypes'/></li>
+            <li className='responsive__link'><Link className='icon-terminal' to='/development'/></li>
+            <li className='responsive__link'><Link className='icon-stats-dots' to='/visualizations'/></li>
           </ul>
         </div>
 
-        <ul className='nav-links'>
+        <ul className='navigation'>
           <li>
-            <Link className='nav-link-anchor proto' to='/prototypes'>
+            <Link className='navigation__link proto' to='/prototypes'>
               Prototypes
 
-              <div className='preview-proto'>
+              <div className='preview'>
                 Page Preview
-                <img className='img-preview' src={require('../assets/screenshots/proto-snow.png')} alt='Prototypes page screenshot'/>
+                <img className='preview__media' src={require('../assets/screenshots/proto-snow.png')} alt='Prototypes page screenshot'/>
               </div>
             </Link>
           </li>
 
           <li>
-            <Link className='nav-link-anchor dev' to='/development'>
+            <Link className='navigation__link dev' to='/development'>
               Development
 
-              <div className='preview-dev'>
+              <div className='preview'>
                 Page Preview
-                <img className='img-preview' src={require('../assets/screenshots/dev-snow.png')} alt='Development page screenshot'/>
+                <img className='preview__media' src={require('../assets/screenshots/dev-snow.png')} alt='Development page screenshot'/>
               </div>
             </Link>
           </li>
 
           <li>
-            <Link className='nav-link-anchor viz' to='/visualizations'>
+            <Link className='navigation__link viz' to='/visualizations'>
               Visualizations
 
-              <div className='preview-viz'>
+              <div className='preview'>
                 Page Preview
-                <img className='img-preview' src={require('../assets/screenshots/viz-snow.png')} alt='Development page screenshot'/>
+                <img className='preview__media' src={require('../assets/screenshots/viz-snow.png')} alt='Development page screenshot'/>
               </div>
             </Link>
           </li>

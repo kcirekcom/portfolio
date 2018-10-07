@@ -1,0 +1,157 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  right: 50px;
+  width: 15%;
+  z-index: 1000;
+}
+
+.navigation__link {
+  text-align: center;
+  color: $black;
+  text-decoration: none;
+  display: block;
+  height: $navheight;
+  line-height: $navheight;
+  font-size: $font-sm;
+
+  &:hover {
+    background: $black;
+    color: $white;
+  }
+
+  &:hover .preview {
+    background: $black;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 100%;
+
+    width: 225%;
+    padding: 0 6%;
+
+    z-index: 1000;
+  }
+}
+
+.preview {
+  display: none;
+}
+
+.preview__media {
+  width: 90%;
+}
+
+.nav-brand {
+  position: fixed;
+  top: 0;
+  left: 50px;
+  width: 18%;
+  text-align: center;
+  z-index: 1000;
+
+  a {
+    font-size: $font-sm + 0.5em;
+    text-decoration: none;
+    display: block;
+    height: $navheight;
+    line-height: $navheight;
+    color: $black;
+
+    &:hover {
+      background: $black;
+      color: $white;
+    }
+  }
+}
+
+.responsive {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  .navigation {
+    right: 35px;
+  }
+
+  .preview {
+    padding: 0 10%; 
+  }
+}
+
+@media (max-width: 1050px) {
+  .nav-brand {
+    left: 35px;
+    width: 17%;
+
+    a {
+      font-size: $font-sm + 0.25em; 
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-brand, .navigation {
+    display: none;
+  }
+
+  .responsive {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: block;
+    background: $black;
+    height: $navheight;
+
+    ul {
+      width: 75%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  .responsive__link {
+    display: inline-block;
+    width: 100px;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      display: inline-block;
+      height: $navheight;
+      line-height: $navheight;
+      padding-left: 35px;
+      padding-right: 35px;
+      font-size: 30px;
+
+      &:hover {
+        cursor: pointer;
+        background: $white;
+        color: $black;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .responsive ul {
+    width: 90%;
+  }
+
+  .responsive__link {
+    width: 75px;
+
+    a {
+      padding-left: 17px;
+      padding-right: 17px;
+      font-size: 40px;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .responsive ul {
+    width: 100%;
+  }
+}
