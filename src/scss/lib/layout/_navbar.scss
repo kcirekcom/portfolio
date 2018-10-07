@@ -1,26 +1,26 @@
-.nav-links {
+.navigation {
   position: fixed;
   top: 0;
   right: 50px;
   width: 15%;
   z-index: 1000;
+}
 
-  .nav-link-anchor {
-    text-align: center;
-    color: $black;
-    text-decoration: none;
-    display: block;
-    height: $navheight;
-    line-height: $navheight;
-    font-size: $font-sm;
+.navigation__link {
+  text-align: center;
+  color: $black;
+  text-decoration: none;
+  display: block;
+  height: $navheight;
+  line-height: $navheight;
+  font-size: $font-sm;
 
-    &:hover {
-      background: $black;
-      color: $white;
-    }
+  &:hover {
+    background: $black;
+    color: $white;
   }
 
-  .proto:hover .preview-proto, .dev:hover .preview-dev, .viz:hover .preview-viz {
+  &:hover .preview {
     background: $black;
     position: absolute;
     display: block;
@@ -31,11 +31,15 @@
     padding: 0 6%;
 
     z-index: 1000;
-
-    .img-preview {
-      width: 90%;
-    }
   }
+}
+
+.preview {
+  display: none;
+}
+
+.preview__media {
+  width: 90%;
 }
 
 .nav-brand {
@@ -66,12 +70,12 @@
 }
 
 @media (max-width: 1050px) {
-  .nav-links {
+  .navigation {
     right: 35px;
+  }
 
-    .proto:hover .preview-proto, .dev:hover .preview-dev, .viz:hover .preview-viz {
-      padding: 0 10%; 
-    }
+  .preview {
+    padding: 0 10%; 
   }
 }
 
@@ -87,7 +91,7 @@
 }
 
 @media (max-width: 900px) {
-  .nav-brand, .nav-links {
+  .nav-brand, .navigation {
     display: none;
   }
 
@@ -104,47 +108,44 @@
       width: 75%;
       margin: 0 auto;
       text-align: center;
+    }
+  }
 
-      li {
-        display: inline-block;
-        width: 100px;
+  .responsive__link {
+    display: inline-block;
+    width: 100px;
 
-        a {
-          color: $white;
-          text-decoration: none;
-          display: inline-block;
-          height: $navheight;
-          line-height: $navheight;
-          padding-left: 35px;
-          padding-right: 35px;
-          font-size: 30px;
+    a {
+      color: $white;
+      text-decoration: none;
+      display: inline-block;
+      height: $navheight;
+      line-height: $navheight;
+      padding-left: 35px;
+      padding-right: 35px;
+      font-size: 30px;
 
-          &:hover {
-            cursor: pointer;
-            background: $white;
-            color: $black;
-          }
-        }
+      &:hover {
+        cursor: pointer;
+        background: $white;
+        color: $black;
       }
     }
   }
 }
 
 @media (max-width: 550px) {
-  .responsive {
+  .responsive ul {
+    width: 90%;
+  }
 
-    ul {
-      width: 90%;
+  .responsive__link {
+    width: 75px;
 
-      li {
-        width: 75px;
-
-        a {
-          padding-left: 17px;
-          padding-right: 17px;
-          font-size: 40px;
-        }
-      }
+    a {
+      padding-left: 17px;
+      padding-right: 17px;
+      font-size: 40px;
     }
   }
 }

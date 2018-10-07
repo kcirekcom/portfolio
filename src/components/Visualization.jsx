@@ -36,12 +36,12 @@ export default class Visualization extends Component {
           </div>
 
           <h2>Star Facts</h2>
-          <div className='visual'>   
+          <div className='visual'>
             <iframe className='visual__iframe' src='https://www.youtube.com/embed/wpE_EevJBmg' frameBorder='0' allowFullScreen></iframe>
           </div>
 
           <h2>Glacier Facts</h2>
-          <div className='visual'>        
+          <div className='visual'>
             <iframe className='visual__iframe' src='https://www.youtube.com/embed/V3voeljivNs' frameBorder='0' allowFullScreen></iframe>
           </div>
         </div>
