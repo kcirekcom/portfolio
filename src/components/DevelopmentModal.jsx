@@ -16,7 +16,7 @@ export default class DevelopmentModal extends Component {
     this.setState({modal: false});
   }
 
-  show = () => {
+  open = () => {
     this.setState({modal: true, loading: true});
   }
 
@@ -30,9 +30,9 @@ export default class DevelopmentModal extends Component {
       imgsArr.push(this.props.development.ref);
     }
 
-    var clickImg = imgsArr.map((img, i) => (i !== 0) ?  null : <img className='click-img' onClick={this.show} key={i} src={require(`../assets/websites/${img}/${img}-${i}.png`)} alt=''/>);
+    var clickImg = imgsArr.map((img, i) => (i !== 0) ?  null : <img className='click-img' onClick={this.open} key={i} src={require(`../assets/websites/${img}/${img}-${i}.png`)} alt=''/>);
 
-    var imgs = imgsArr.map((img, i) => <img className='img' key={i} src={require(`../assets/websites/${img}/${img}-${i}.png`)} alt=''/>);
+    var imgs = imgsArr.map((img, i) => <img className='slideshow__img' key={i} src={require(`../assets/websites/${img}/${img}-${i}.png`)} alt=''/>);
 
     return (
       <div>
@@ -44,26 +44,26 @@ export default class DevelopmentModal extends Component {
 
         {this.state.modal ? (
           <div className='modal-bg'>
-            <span className='x' onClick={this.close}>
+            <span className='modal-bg__btn' onClick={this.close}>
               &#x2715;
             </span>
 
-            <div className='modal-web'>
-                <div className='modal-header-web'>
-                  <button className='top' type='button' onClick={this.close}>
+            <div className='modal modal--web'>
+                <div className='modal__header modal__header--web'>
+                  <button className='btn modal__btn' type='button' onClick={this.close}>
                     Close
                   </button>
 
-                  <h1 className={`text-center ${this.props.development.ref}`}>
+                  <h1 className={`modal__title text-center ${this.props.development.ref}`}>
                     {this.props.development.name}
                   </h1>
                 </div>
 
-                <div className='img-section'>
+                <div className='slideshow'>
                   {imgs}
                 </div>
 
-                <div className='info-dev' dangerouslySetInnerHTML={this.createMarkup(this.props.development.desc)}/>      
+                <div className='modal__info' dangerouslySetInnerHTML={this.createMarkup(this.props.development.desc)}/>      
             </div>
           </div>
         ) : null}
