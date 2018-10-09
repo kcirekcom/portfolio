@@ -1,6 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
+import AriaModal from 'react-aria-modal';
 import sanitizeHtml from 'sanitize-html';
 
 export default class DevelopmentModal extends Component {
@@ -8,17 +9,25 @@ export default class DevelopmentModal extends Component {
     super();
     this.state = {
       modal: false,
-      loading: false,
     }
+
+    this.activateModal = this.activateModal.bind(this);
+    this.deactivateModal = this.deactivateModal.bind(this);
+    this.getApplicationNode = this.getApplicationNode.bind(this);
+    this.createMarkup = this.createMarkup.bind(this);
   }
 
-  close = () => {
-    this.setState({modal: false});
-  }
-
-  open = () => {
-    this.setState({modal: true, loading: true});
-  }
+  activateModal = () => {
+    this.setState({ modal: true });
+  };
+ 
+  deactivateModal = () => {
+    this.setState({ modal: false });
+  };
+ 
+  getApplicationNode = () => {
+    return document.getElementById('react-src');
+  };
 
   createMarkup = (htmlInput) => {
     return {__html: sanitizeHtml(htmlInput)};
@@ -30,7 +39,17 @@ export default class DevelopmentModal extends Component {
       imgsArr.push(this.props.development.ref);
     }
 
-    var clickImg = imgsArr.map((img, i) => (i !== 0) ?  null : <img className='click-img' onClick={this.open} key={i} src={require(`../assets/websites/${img}/${img}-${i}.png`)} alt=''/>);
+    var clickImg = imgsArr.map((img, i) => {
+      if (i === 0) {
+        return (
+          <div className='development'>
+            <img className='development__img' key={i} src={require(`../assets/websites/${img}/${img}-${i}.png`)} alt=''/>
+            <button className='btn development__btn' onClick={this.activateModal}>Learn more about this project</button>
+          </div>
+        )
+      }
+      return null;
+    });
 
     var imgs = imgsArr.map((img, i) => <img className='slideshow__img' key={i} src={require(`../assets/websites/${img}/${img}-${i}.png`)} alt=''/>);
 
@@ -43,29 +62,31 @@ export default class DevelopmentModal extends Component {
         {clickImg}
 
         {this.state.modal ? (
-          <div className='modal-bg'>
-            <span className='modal-bg__btn' onClick={this.close}>
-              &#x2715;
-            </span>
-
+          <AriaModal
+            titleText={`${this.props.development.name} project`}
+            onExit={this.deactivateModal}
+            initialFocus='#deactivate-modal'
+            getApplicationNode={this.getApplicationNode}
+            underlayStyle={{ paddingTop: '50px' }}
+          >
             <div className='modal modal--web'>
-                <div className='modal__header modal__header--web'>
-                  <button className='btn modal__btn' type='button' onClick={this.close}>
-                    Close
-                  </button>
+              <div className='modal__header modal__header--web'>
+                <button id='deactivate-modal' className='btn modal__btn' type='button' onClick={this.deactivateModal}>
+                  Close
+                </button>
 
-                  <h1 className={`modal__title text-center ${this.props.development.ref}`}>
-                    {this.props.development.name}
-                  </h1>
-                </div>
+                <h2 className={`modal__title text-center ${this.props.development.ref}`}>
+                  {this.props.development.name}
+                </h2>
+              </div>
 
-                <div className='slideshow'>
-                  {imgs}
-                </div>
+              <div className='slideshow'>
+                {imgs}
+              </div>
 
-                <div className='modal__info' dangerouslySetInnerHTML={this.createMarkup(this.props.development.desc)}/>      
+              <div className='modal__info' dangerouslySetInnerHTML={this.createMarkup(this.props.development.desc)}/>      
             </div>
-          </div>
+          </AriaModal>
         ) : null}
       </div>
     )

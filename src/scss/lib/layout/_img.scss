@@ -1,14 +1,29 @@
-.click-img {
-  display: block;
+.development {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
   margin: 15px auto;
   width: 560px;
+  padding-bottom: -20px;
   box-shadow: 0px 2px 1px rgba(0,0,0,0.1);
 
   &:hover {
-    cursor: pointer;
     outline: rgba(0,0,0,0.1) 10px solid;
     transition: all 0.4s ease;
   }
+}
+
+.development__img {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.development__btn {
+  @extend .prototype__btn;
+  bottom: 10px;
+  right: 10px;
 }
 
 .visuals-section {
@@ -74,7 +89,7 @@
 }
 
 @media (max-width: 1050px) {
-  .click-img {
+  .development {
       width: 475px;
   }
 
@@ -93,7 +108,7 @@
 }
 
 @media (max-width: 900px) {
-  .click-img {
+  .development {
     width: 400px;
 
     &:hover {
@@ -125,7 +140,7 @@
 }
 
 @media (max-width: 450px) {
-  .click-img {
+  .development {
     width: 350px;
   }
 

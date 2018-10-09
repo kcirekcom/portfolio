@@ -45,7 +45,7 @@
     "web" : true
   },
   {
-    "name": "FREMONT PATROLLER",
+    "name": "PATROLLER",
     "ref": "fremont",
     "quickCopy": null,
     "desc" : "<p>Click <a href='http://fremont-bike-patroller.herokuapp.com' target='_blank'>HERE</a> to view this website.</p><p>This application provides daily estimates of bike traffic at the Fremont Bridge. Individuals can check the traffic for each day from the past three years, or choose a date range. This application uses seattle.gov’s Socrata (SODA) API.</p>",

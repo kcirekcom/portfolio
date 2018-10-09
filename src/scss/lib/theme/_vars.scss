@@ -19,7 +19,8 @@ $colors: (
     }
 
     @else {
-      &--#{$color-name}:hover {
+      &--#{$color-name}:hover, 
+      &--#{$color-name}:focus {
         background: $color;
       }
     } 
