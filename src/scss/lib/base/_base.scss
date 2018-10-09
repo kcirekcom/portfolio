@@ -14,10 +14,6 @@ h2 {
   text-align: center;
 }
 
-.preview-proto, .preview-dev, .preview-viz {
-  display: none;
-}
-
 .btn {
   cursor: pointer;
   border: $black;
@@ -26,7 +22,8 @@ h2 {
   color: $black;
   padding: 5px 10px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: $black;
     color: $white;
   }
@@ -71,9 +68,7 @@ h2 {
   h1 {
     margin-top: 120px;
   }
-}
 
-@media (max-width: 650px) {
   .btn {
     background: $black;
     color: $white;

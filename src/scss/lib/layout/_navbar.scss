@@ -15,7 +15,8 @@
   line-height: $navheight;
   font-size: $font-sm;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: $black;
     color: $white;
   }
@@ -32,6 +33,15 @@
 
     z-index: 1000;
   }
+}
+
+.is-active {
+  text-decoration: underline;
+}
+
+.is-active--responsive {
+  background: $white;
+  color: $black;
 }
 
 .preview {
@@ -58,7 +68,8 @@
     line-height: $navheight;
     color: $black;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: $black;
       color: $white;
     }
@@ -125,7 +136,8 @@
       padding-right: 35px;
       font-size: 30px;
 
-      &:hover {
+      &:hover
+      &:focus {
         cursor: pointer;
         background: $white;
         color: $black;

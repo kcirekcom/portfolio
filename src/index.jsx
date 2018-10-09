@@ -19,7 +19,7 @@ render(
         <Route exact path='/' component={Home}/>
         <Route exact path='/visualizations' component={Visualization}/>
         <Route exact path='/prototypes' component={Prototype}/>
-        <Route path='/development' component={Development}/>
+        <Route exact path='/development' component={Development}/>
       </Switch>
     </div>
   </Router>,
