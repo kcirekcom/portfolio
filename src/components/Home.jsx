@@ -8,7 +8,7 @@ export default class Home extends Component {
       <div className='about-info'>
         <h1 className='text-center'>Welcome</h1>
 
-        <p>My name is Erick Mock, and I'm a web developer and designer. I have a certificate in advanced software development in full stack JavaScript along with a B.A. degree in psychology. I enjoy working with design software and web technologies to develop tools that enhance the user experience of creative platforms and interfaces.</p>
+        <p>My name is Erick Mock, and I'm a web developer and designer. I have a certificate in advanced software development in full stack JavaScript along with a B.A. degree in psychology. I enjoy working with design software and web technologies to develop tools that enhance the user experience and accessibility of creative platforms and interfaces.</p>
 
         <ul className='social'>
           <li className='social__link'><a href='https://github.com/kcirekcom' target='_blank' className='icon-github'/></li>

@@ -63,7 +63,7 @@ export default class PrototypeModal extends Component {
               </div>
 
               <div className={`modal__frame ${(this.props.prototype.web == true ? '' : 'modal__frame--mobile')} text-center`}>
-                <iframe className='artboard' src={this.props.prototype.embedLink} frameBorder='0' allowFullScreen></iframe>
+                <iframe role='presentation' className='artboard' src={this.props.prototype.embedLink} frameBorder='0' allowFullScreen></iframe>
               </div>
 
               <div className='modal__info modal__info--prototype' dangerouslySetInnerHTML={this.createMarkup(this.props.prototype.desc)}/>                         
