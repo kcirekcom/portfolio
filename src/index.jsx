@@ -16,10 +16,12 @@ render(
     <div>
       <Navbar/>
       <Switch>
-        <Route exact path='/' component={Home}/>
-        <Route exact path='/visualizations' component={Visualization}/>
-        <Route exact path='/prototypes' component={Prototype}/>
-        <Route exact path='/development' component={Development}/>
+        <main>
+          <Route exact path='/' component={Home}/>
+          <Route exact path='/visualizations' component={Visualization}/>
+          <Route exact path='/prototypes' component={Prototype}/>
+          <Route exact path='/development' component={Development}/>
+        </main>
       </Switch>
     </div>
   </Router>,

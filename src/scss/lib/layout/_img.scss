@@ -7,7 +7,7 @@
   margin: 15px auto;
   width: 560px;
   padding-bottom: -20px;
-  box-shadow: 0px 2px 1px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 
   &:hover {
     outline: rgba(0,0,0,0.1) 10px solid;
@@ -43,7 +43,7 @@
 }
 
 .visual__link {
-  font-size: $font-lg - 1em;
+  font-size: $font-lg;
   text-decoration: none;
   color: $white;
   font-weight: bold;
@@ -53,7 +53,11 @@
 
   position: absolute;
   top: 39%;
-  left: 17%;
+  left: 17.25%;
+
+  &:visited {
+    color: $white;
+  }
 }
 
 .visual__link--ca {

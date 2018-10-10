@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 export default class Navbar extends Component {
   render() {
     return (
-      <nav>
+      <nav role='navigation'>
         <p className='nav-brand name'>
           <NavLink to='/'>
             Erick F. Mock

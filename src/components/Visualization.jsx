@@ -14,7 +14,7 @@ export default class Visualization extends Component {
           <h2>Dropping Oil (Consumption)</h2>
           <div className='visual'>
             <a className='visual__link' href='https://mir-cdn.behance.net/v1/rendition/project_modules/1400/8524ae53433129.593595fa7d22f.jpg' target='_blank'>Behance Link</a>
-            <img className='visual__img' src={require('../assets/data-viz/BP-Oil-Stats-2015.jpg')} alt='Data visualization about world oil consumption in 2015, which compares the U.S. consumption figure of 19,396 to other countries and regions.'/>
+            <img className='visual__img' src={require('../assets/data-viz/BP-Oil-Stats-2015.jpg')} alt='Data visualization about world oil consumption in 2015, which compares the U.S. consumption figure of 19,396 to other countries and regions. The numbers are measured in units of a thousand barrels daily.'/>
           </div>
 
           <h2>MLB Cy Young Data and Stats</h2>

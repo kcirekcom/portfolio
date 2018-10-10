@@ -39,7 +39,7 @@ export default class DevelopmentModal extends Component {
       imgsArr.push(this.props.development.ref);
     }
 
-    var clickImg = imgsArr.map((img, i) => {
+    var banner = imgsArr.map((img, i) => {
       if (i === 0) {
         return (
           <div className='development'>
@@ -59,7 +59,7 @@ export default class DevelopmentModal extends Component {
           {this.props.development.name}
         </h2>
 
-        {clickImg}
+        {banner}
 
         {this.state.modal ? (
           <AriaModal
