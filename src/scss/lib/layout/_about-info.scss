@@ -20,7 +20,8 @@
     display: inline-block;
     font-size: 30px;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $black;
       transition: all 0.6s ease;
     }
