@@ -16,7 +16,7 @@ export default class Development extends Component {
     var developments = this.state.data.map((d, i) => (d.category === 'prototype' ? null : <DevelopmentModal development={d} key={i}/>));
 
     return (
-      <div>
+      <div role='main'>
         <h1 className='text-center'>
           Software Development
         </h1>

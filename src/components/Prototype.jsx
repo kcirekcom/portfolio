@@ -16,7 +16,7 @@ export default class Prototype extends Component {
     var prototypes = this.state.data.map((d, i) => (d.category === 'development' ? null : <PrototypeModal prototype={d} key={i}/>));
 
     return (
-      <div>
+      <div role='main'>
         <h1 className='text-center'>
           Animated Prototypes
         </h1>

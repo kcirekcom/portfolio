@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 export default class Home extends Component {
   render() {
     return (
-      <div className='about-info'>
+      <div role='main' className='about-info'>
         <h1 className='text-center'>Welcome</h1>
 
         <p>My name is Erick Mock, and I'm a web developer and designer. I have a certificate in advanced software development in full stack JavaScript along with a degree in psychology. I enjoy working with design software and web technologies to develop components that enhance the user experience and accessibility of creative platforms and interfaces.</p>
