@@ -9,12 +9,14 @@ export default class DevelopmentModal extends Component {
     super();
     this.state = {
       modal: false,
+      activeKey: 0
     }
 
     this.activateModal = this.activateModal.bind(this);
     this.deactivateModal = this.deactivateModal.bind(this);
     this.getApplicationNode = this.getApplicationNode.bind(this);
     this.createMarkup = this.createMarkup.bind(this);
+    this.toggleClass = this.toggleClass.bind(this);
   }
 
   activateModal = () => {
@@ -33,6 +35,13 @@ export default class DevelopmentModal extends Component {
     return {__html: sanitizeHtml(htmlInput)};
   }
 
+  toggleClass(event) {
+    event.persist();
+
+    let value = event.target.attributes.value.value;
+    this.setState({ activeKey: value });
+  };
+
   render() {
     var imgsArr = [];
     for (var i = 0; i < 5; i++) { 
@@ -42,8 +51,8 @@ export default class DevelopmentModal extends Component {
     var banner = imgsArr.map((img, i) => {
       if (i === 0) {
         return (
-          <div className='development'>
-            <img className='development__img' key={i} src={require(`../assets/websites/${img}/${img}-${i}.png`)} alt=''/>
+          <div className='development' key={i}>
+            <img className='development__img' src={require(`../assets/websites/${img}/${img}-${i}.png`)} alt=''/>
             <button className='btn development__btn' onClick={this.activateModal}>Learn more about this project</button>
           </div>
         )
@@ -51,7 +60,13 @@ export default class DevelopmentModal extends Component {
       return null;
     });
 
-    var imgs = imgsArr.map((img, i) => <img className='slideshow__img' key={i} src={require(`../assets/websites/${img}/${img}-${i}.png`)} alt=''/>);
+    var imgs = imgsArr.map((img, i) => {
+      return(
+        <div className={`slide ${this.state.activeKey == i ? 'slide--active': ''}`} key={i}>
+          <img className='slide__img' src={require(`../assets/websites/${img}/${img}-${i}.png`)} alt='' onClick={this.toggleClass} onKeyUp={this.toggleClass} value={i} tabIndex='0'/>
+        </div>
+      )
+    });
 
     return (
       <div>
@@ -80,7 +95,7 @@ export default class DevelopmentModal extends Component {
                 </h2>
               </div>
 
-              <div className='slideshow'>
+              <div className='slideshow' aria-hidden='true'>
                 {imgs}
               </div>
 
