@@ -5,8 +5,8 @@ import AriaModal from 'react-aria-modal';
 import sanitizeHtml from 'sanitize-html';
 
 export default class DevelopmentModal extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       modal: false,
       activeKey: 0
@@ -19,19 +19,19 @@ export default class DevelopmentModal extends Component {
     this.toggleClass = this.toggleClass.bind(this);
   }
 
-  activateModal = () => {
+  activateModal() {
     this.setState({ modal: true });
   };
  
-  deactivateModal = () => {
+  deactivateModal() {
     this.setState({ modal: false });
   };
  
-  getApplicationNode = () => {
+  getApplicationNode() {
     return document.getElementById('react-src');
   };
 
-  createMarkup = (htmlInput) => {
+  createMarkup(htmlInput) {
     return {__html: sanitizeHtml(htmlInput)};
   }
 

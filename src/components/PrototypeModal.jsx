@@ -5,10 +5,10 @@ import AriaModal from 'react-aria-modal';
 import sanitizeHtml from 'sanitize-html';
 
 export default class PrototypeModal extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      modal: false,
+      modal: false
     }
 
     this.activateModal = this.activateModal.bind(this);
@@ -17,19 +17,19 @@ export default class PrototypeModal extends Component {
     this.createMarkup = this.createMarkup.bind(this);
   }
 
-  activateModal = () => {
+  activateModal() {
     this.setState({ modal: true });
   };
  
-  deactivateModal = () => {
+  deactivateModal() {
     this.setState({ modal: false });
   };
  
-  getApplicationNode = () => {
+  getApplicationNode() {
     return document.getElementById('react-src');
   };
 
-  createMarkup = (htmlInput) => {
+  createMarkup(htmlInput) {
     return {__html: sanitizeHtml(htmlInput)};
   }
 
