@@ -32,20 +32,6 @@ let plugins = [
 ];
 
 let optimizedPlugins = [
-  new UglifyJsPlugin({
-    uglifyOptions:{
-      sourceMap: true,
-      mangle: true,
-      compress: {
-        warnings: true
-      }
-    }
-  }),
-  new webpack.DefinePlugin({
-    'process.env': {
-      'NODE_ENV': JSON.stringify('production')
-    }
-  }),
   new OptimizeCssAssetsPlugin({}),
   new CleanPlugin(),
 ];
@@ -53,7 +39,7 @@ let optimizedPlugins = [
 module.exports = {
   mode: production ? 'production' : 'development',
   entry: './src/index.jsx',
-  devtool: production ? false : 'eval',
+  devtool: production ? 'source-map' : 'eval',
   plugins,
   optimization: {
     minimizer: optimizedPlugins
