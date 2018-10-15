@@ -24,34 +24,40 @@ export default class Navbar extends Component {
 
         <ul className='navigation'>
           <li>
-            <NavLink activeClassName='is-active' className='navigation__link proto' to='/prototypes'>
+            <NavLink activeClassName='is-active' className='navigation__link' to='/prototypes'>
               Prototypes
 
               <div className='preview'>
                 Page Preview
-                <img className='preview__media' src={require('../assets/screenshots/proto-snow.png')} alt='Prototypes page screenshot'/>
+                <div className='preview__media'>
+                  <img src={require('../assets/screenshots/prototype-preview.png')} alt=''/>
+                </div>
               </div>
             </NavLink>
           </li>
 
           <li>
-            <NavLink activeClassName='is-active' className='navigation__link dev' to='/development'>
+            <NavLink activeClassName='is-active' className='navigation__link' to='/development'>
               Development
 
               <div className='preview'>
                 Page Preview
-                <img className='preview__media' src={require('../assets/screenshots/dev-snow.png')} alt='Development page screenshot'/>
+                <div className='preview__media'>
+                  <img src={require('../assets/screenshots/development-preview.png')} alt=''/>
+                </div>
               </div>
             </NavLink>
           </li>
 
           <li>
-            <NavLink activeClassName='is-active' className='navigation__link viz' to='/visualizations'>
+            <NavLink activeClassName='is-active' className='navigation__link' to='/visualizations'>
               Visualizations
 
               <div className='preview'>
                 Page Preview
-                <img className='preview__media' src={require('../assets/screenshots/viz-snow.png')} alt='Development page screenshot'/>
+                <div className='preview__media'>
+                  <img src={require('../assets/screenshots/visualization-preview.png')} alt=''/>
+                </div>
               </div>
             </NavLink>
           </li>
