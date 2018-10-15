@@ -4,9 +4,9 @@ const dotenv = require('dotenv');
 const webpack = require('webpack');
 const HTMLPlugin = require('html-webpack-plugin');
 const CleanPlugin = require('clean-webpack-plugin');
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 dotenv.load();
 
@@ -14,8 +14,8 @@ const production = process.env.NODE_ENV === 'production';
 
 let plugins = [
   new MiniCssExtractPlugin({
-    filename: "[name].css",
-    chunkFilename: "[id].css"
+    filename: '[name].css',
+    chunkFilename: '[id].css'
   }),
   new HTMLPlugin({
     template: `${__dirname}/src/index.html`
@@ -39,6 +39,11 @@ let optimizedPlugins = [
       compress: {
         warnings: true
       }
+    }
+  }),
+  new webpack.DefinePlugin({
+    'process.env': {
+      'NODE_ENV': JSON.stringify('production')
     }
   }),
   new OptimizeCssAssetsPlugin({}),
@@ -80,9 +85,9 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           production ? MiniCssExtractPlugin.loader : { loader: 'style-loader' },
-          { loader: "css-loader" },
-          { loader: "postcss-loader" },
-          { loader: "resolve-url-loader" },
+          { loader: 'css-loader' },
+          { loader: 'postcss-loader' },
+          { loader: 'resolve-url-loader' },
           { loader: 'sass-loader', options: { sourceMap: true } }
         ]
       }
