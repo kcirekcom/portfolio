@@ -6,7 +6,7 @@ import modals from '../data/modals.json';
 
 export default class Development extends Component {
   render() {
-    var developments = modals.map((d, i) => (d.category === 'prototype' ? null : <DevelopmentModal development={d} key={i}/>));
+    var developments = modals.map((d, i) => (d.category === 'development' ? <DevelopmentModal development={d} key={i}/> : null));
 
     return (
       <div role='main'>

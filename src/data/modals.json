@@ -45,6 +45,24 @@
     "web" : true
   },
   {
+    "name": "Events",
+    "ref": "events",
+    "quickCopy": null,
+    "desc" : "<p>Feel free to <a href='https://github.com/kcirekcom/upcoming-events-app' target='_blank'>check out the repository</a> on my github account.</p><p>This application allows you to view upcoming events for an artist or band by entering their name in the URL. It fetches data from the Bandsintown API and displays the upcoming events accordingly.</p>",
+    "embedLink": null,
+    "category" : "development",
+    "web" : true
+  },
+  {
+    "name": "APU Articles",
+    "ref": "apu",
+    "quickCopy": null,
+    "desc" : "<p>Feel free to <a href='https://www.apu.edu/articles/' target='_blank'>explore and view the website</a>.</p><p>Developed this specific articles site by fetching the necessary data in PHP, structuring the template in HTML, and styling in SASS/CSS using BEM methodology. ARIA attributes and WCAG standards were implemented appropriatedly as well to enhance the accessibility of the site.</p>",
+    "embedLink": null,
+    "category" : "development",
+    "web" : true
+  },
+  {
     "name": "PATROLLER",
     "ref": "fremont",
     "quickCopy": null,

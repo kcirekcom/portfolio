@@ -6,7 +6,7 @@ import PrototypeModal from './PrototypeModal.jsx';
 
 export default class Prototype extends Component {
   render() {
-    var prototypes = modals.map((d, i) => (d.category === 'development' ? null : <PrototypeModal prototype={d} key={i}/>));
+    var prototypes = modals.map((d, i) => (d.category === 'prototype' ? <PrototypeModal prototype={d} key={i}/> : null));
 
     return (
       <div role='main'>
