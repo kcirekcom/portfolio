@@ -4,7 +4,6 @@ const dotenv = require('dotenv');
 const webpack = require('webpack');
 const HTMLPlugin = require('html-webpack-plugin');
 const CleanPlugin = require('clean-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
@@ -32,7 +31,6 @@ let plugins = [
 ];
 
 let optimizedPlugins = [
-  new UglifyJsPlugin(),
   new OptimizeCssAssetsPlugin({}),
   new CleanPlugin(),
 ];
