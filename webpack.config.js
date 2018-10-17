@@ -31,6 +31,21 @@ let plugins = [
 ];
 
 let optimizedPlugins = [
+  {
+    runtimeChunk: {
+      name: 'runtime'
+    },
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          priority: -20,
+          chunks: 'all'
+        }
+      }
+    }
+  },
   new OptimizeCssAssetsPlugin({}),
   new CleanPlugin(),
 ];
