@@ -35,30 +35,26 @@ let optimizedPlugins = [
   new CleanPlugin(),
 ];
 
-let chunks = {
-  runtimeChunk: {
-    name: 'runtime'
-  },
-  splitChunks: {
-    cacheGroups: {
-      vendor: {
-        test: /[\\/]node_modules[\\/]/,
-        name: 'vendors',
-        priority: -20,
-        chunks: 'all'
-      }
-    }
-  }
-}
-
 module.exports = {
   mode: production ? 'production' : 'development',
   entry: './src/index.jsx',
   devtool: production ? 'source-map' : 'eval',
   plugins,
   optimization: {
-    chunks,
-    minimizer: optimizedPlugins
+    minimizer: optimizedPlugins,
+    runtimeChunk: {
+      name: 'runtime'
+    },
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          priority: -20,
+          chunks: 'all'
+        }
+      }
+    }
   },
   output: {
     path: `${__dirname}/build`,
