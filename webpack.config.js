@@ -58,7 +58,8 @@ module.exports = {
   },
   output: {
     path: `${__dirname}/build`,
-    filename: 'bundle.js'
+    chunkFilename: "[name].js",
+    filename: "[name].js"
   },
   module: {
     rules: [
