@@ -32,6 +32,7 @@ let plugins = [
 ];
 
 let optimizedPlugins = [
+  new UglifyJsPlugin(),
   new OptimizeCssAssetsPlugin({}),
   new CleanPlugin(),
 ];
