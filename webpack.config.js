@@ -31,24 +31,25 @@ let plugins = [
 ];
 
 let optimizedPlugins = [
-  {
-    runtimeChunk: {
-      name: 'runtime'
-    },
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          priority: -20,
-          chunks: 'all'
-        }
-      }
-    }
-  },
   new OptimizeCssAssetsPlugin({}),
   new CleanPlugin(),
 ];
+
+let chunks = {
+  runtimeChunk: {
+    name: 'runtime'
+  },
+  splitChunks: {
+    cacheGroups: {
+      vendor: {
+        test: /[\\/]node_modules[\\/]/,
+        name: 'vendors',
+        priority: -20,
+        chunks: 'all'
+      }
+    }
+  }
+}
 
 module.exports = {
   mode: production ? 'production' : 'development',
@@ -56,6 +57,7 @@ module.exports = {
   devtool: production ? 'source-map' : 'eval',
   plugins,
   optimization: {
+    chunks,
     minimizer: optimizedPlugins
   },
   output: {
