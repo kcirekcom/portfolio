@@ -11,33 +11,26 @@ export default class DevelopmentModal extends Component {
       modal: false,
       activeKey: 0
     }
-
-    this.activateModal = this.activateModal.bind(this);
-    this.deactivateModal = this.deactivateModal.bind(this);
-    this.getApplicationNode = this.getApplicationNode.bind(this);
-    this.createMarkup = this.createMarkup.bind(this);
-    this.toggleClass = this.toggleClass.bind(this);
   }
 
-  activateModal() {
+  activateModal = () => {
     this.setState({ modal: true });
   };
  
-  deactivateModal() {
+  deactivateModal = () => {
     this.setState({ modal: false });
   };
  
-  getApplicationNode() {
+  getApplicationNode = () => {
     return document.getElementById('react-src');
   };
 
-  createMarkup(htmlInput) {
+  createMarkup = (htmlInput) => {
     return {__html: sanitizeHtml(htmlInput)};
   }
 
-  toggleClass(event) {
+  toggleClass = (event) => {
     event.persist();
-
     let value = event.target.attributes.value.value;
     this.setState({ activeKey: value });
   };

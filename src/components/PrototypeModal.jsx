@@ -10,26 +10,21 @@ export default class PrototypeModal extends Component {
     this.state = {
       modal: false
     }
-
-    this.activateModal = this.activateModal.bind(this);
-    this.deactivateModal = this.deactivateModal.bind(this);
-    this.getApplicationNode = this.getApplicationNode.bind(this);
-    this.createMarkup = this.createMarkup.bind(this);
   }
 
-  activateModal() {
+  activateModal = () => {
     this.setState({ modal: true });
   };
  
-  deactivateModal() {
+  deactivateModal = () => {
     this.setState({ modal: false });
   };
  
-  getApplicationNode() {
+  getApplicationNode = () => {
     return document.getElementById('react-src');
   };
 
-  createMarkup(htmlInput) {
+  createMarkup = (htmlInput) => {
     return {__html: sanitizeHtml(htmlInput)};
   }
 
