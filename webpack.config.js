@@ -42,24 +42,10 @@ module.exports = {
   plugins,
   optimization: {
     minimizer: optimizedPlugins,
-    runtimeChunk: {
-      name: 'runtime'
-    },
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          priority: -20,
-          chunks: 'all'
-        }
-      }
-    }
   },
   output: {
     path: `${__dirname}/build`,
-    chunkFilename: "[name].js",
-    filename: "[name].js"
+    filename: 'bundle.js'
   },
   module: {
     rules: [
