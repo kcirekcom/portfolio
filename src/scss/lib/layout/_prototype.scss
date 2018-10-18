@@ -8,28 +8,28 @@
   text-align: center;
   font-size: $font-std;
   box-sizing: border-box;
-  // border: $black 1px solid;
   border-radius: 4px;
   box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
   font-family: $font-std;
   
-  .glare {
-    visibility: hidden;
-    position: absolute;
-    width: 45px;
-    height: 100%;
-    background-color: rgba(255,255,255,0.3);
-    transform: skew(-5deg);
-    border-radius: 4px;
-    top: -0.25%;
-    right: 87%;
-    
-    &:active {
-      opacity: 0.95;
-    }
-  }
-  
   @include colors-list($colors);
+}
+
+.glare {
+  visibility: hidden;
+  position: absolute;
+  width: 45px;
+  height: 100%;
+  background-color: rgba(255,255,255,0.2);
+  transform: skew(-5deg);
+  border-radius: 4px;
+  top: -0.25%;
+  right: 87%;
+  opacity: 0.55;
+}
+
+.glare--off {
+  display: none;
 }
 
 .prototype__title {
@@ -53,6 +53,7 @@
 .prototype:focus {
   padding: 42px 15px;
   color: $white;
+  text-shadow: 1px 1px 3px #212121;
   border: none;
   position: relative;
 
@@ -72,7 +73,7 @@
     visibility: visible;
     right: 2%;
     opacity: 0;
-    transition: all 0.4s linear;
+    transition: all 0.4s cubic-bezier(0.51, 0.51, 0.51, 0.71);
   }
 }
 

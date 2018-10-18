@@ -14,15 +14,15 @@ export default class PrototypeModal extends Component {
 
   activateModal = () => {
     this.setState({ modal: true });
-  };
+  }
  
   deactivateModal = () => {
     this.setState({ modal: false });
-  };
+  }
  
   getApplicationNode = () => {
     return document.getElementById('react-src');
-  };
+  }
 
   createMarkup = (htmlInput) => {
     return {__html: sanitizeHtml(htmlInput)};
@@ -35,7 +35,7 @@ export default class PrototypeModal extends Component {
           <h2 className={`prototype__title ${this.props.prototype.ref}`}>{this.props.prototype.name}</h2>
           <div className='prototype__copy'>{this.props.prototype.quickCopy}</div>
           <button className='btn prototype__btn' onClick={this.activateModal}>Learn more about this project</button>
-          <div className='glare'/>
+          <div className={`glare ${this.props.isChecked === true ? 'glare--off': ''}`}/>
         </div>
 
         {this.state.modal ? (

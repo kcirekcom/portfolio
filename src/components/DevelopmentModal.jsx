@@ -15,15 +15,15 @@ export default class DevelopmentModal extends Component {
 
   activateModal = () => {
     this.setState({ modal: true });
-  };
+  }
  
   deactivateModal = () => {
     this.setState({ modal: false });
-  };
+  }
  
   getApplicationNode = () => {
     return document.getElementById('react-src');
-  };
+  }
 
   createMarkup = (htmlInput) => {
     return {__html: sanitizeHtml(htmlInput)};
@@ -33,7 +33,7 @@ export default class DevelopmentModal extends Component {
     event.persist();
     let value = event.target.attributes.value.value;
     this.setState({ activeKey: value });
-  };
+  }
 
   render() {
     var imgsArr = [];
