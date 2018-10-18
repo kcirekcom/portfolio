@@ -26,10 +26,10 @@ export default class Prototype extends Component {
           Animated Prototypes
         </h1>
 
-        <div className='prototype-animation text-center'>
+        <div className='prototype-animation text-center' aria-hidden='true'>
           <label htmlFor='animation'>
             Turn glare animation off
-            <input type='checkbox' id='animation' name='animation' checked={this.state.isChecked} onChange={this.toggleAnimation} aria-hidden='true'/>
+            <input type='checkbox' id='animation' name='animation' checked={this.state.isChecked} onChange={this.toggleAnimation}/>
           </label>
         </div>
 
