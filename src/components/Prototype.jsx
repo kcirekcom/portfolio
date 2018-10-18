@@ -8,14 +8,13 @@ export default class Prototype extends Component {
   constructor() {
     super();
     this.state = {
-      isChecked: false
+      isChecked: JSON.parse(localStorage.getItem('animation')) || false
     }
   }
 
   toggleAnimation = () => {
-    this.setState({
-      isChecked: !this.state.isChecked
-    });
+    localStorage.setItem('animation', !this.state.isChecked);
+    this.setState({ isChecked: !this.state.isChecked });
   }
 
   render() {
@@ -27,10 +26,10 @@ export default class Prototype extends Component {
           Animated Prototypes
         </h1>
 
-        <div className='prototype-animation text-center'>
-          <label htmlFor="animation">
+        <div className='prototype-animation text-center' aria-hidden='true'>
+          <label htmlFor='animation'>
             Turn glare animation off
-            <input type="checkbox" id="animation" name="animation" checked={this.state.isChecked} onChange={this.toggleAnimation}/>
+            <input type='checkbox' id='animation' name='animation' checked={this.state.isChecked} onChange={this.toggleAnimation}/>
           </label>
         </div>
 
