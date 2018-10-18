@@ -41,7 +41,7 @@ module.exports = {
   devtool: production ? 'source-map' : 'eval',
   plugins,
   optimization: {
-    minimizer: optimizedPlugins
+    minimizer: optimizedPlugins,
   },
   output: {
     path: `${__dirname}/build`,

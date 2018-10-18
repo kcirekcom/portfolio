@@ -10,26 +10,21 @@ export default class PrototypeModal extends Component {
     this.state = {
       modal: false
     }
-
-    this.activateModal = this.activateModal.bind(this);
-    this.deactivateModal = this.deactivateModal.bind(this);
-    this.getApplicationNode = this.getApplicationNode.bind(this);
-    this.createMarkup = this.createMarkup.bind(this);
   }
 
-  activateModal() {
+  activateModal = () => {
     this.setState({ modal: true });
-  };
+  }
  
-  deactivateModal() {
+  deactivateModal = () => {
     this.setState({ modal: false });
-  };
+  }
  
-  getApplicationNode() {
+  getApplicationNode = () => {
     return document.getElementById('react-src');
-  };
+  }
 
-  createMarkup(htmlInput) {
+  createMarkup = (htmlInput) => {
     return {__html: sanitizeHtml(htmlInput)};
   }
 
@@ -40,7 +35,7 @@ export default class PrototypeModal extends Component {
           <h2 className={`prototype__title ${this.props.prototype.ref}`}>{this.props.prototype.name}</h2>
           <div className='prototype__copy'>{this.props.prototype.quickCopy}</div>
           <button className='btn prototype__btn' onClick={this.activateModal}>Learn more about this project</button>
-          <div className='glare'/>
+          <div className={`glare ${this.props.isChecked === true ? 'glare--off': ''}`}/>
         </div>
 
         {this.state.modal ? (

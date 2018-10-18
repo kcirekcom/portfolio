@@ -41,6 +41,10 @@
 
 .is-active {
   text-decoration: underline;
+
+  &:hover .preview {
+    display: none;
+  }
 }
 
 .is-active--responsive {
