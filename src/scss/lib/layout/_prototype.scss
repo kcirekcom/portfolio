@@ -87,6 +87,10 @@
     }
   }
 
+  .prototype-animation {
+    display: none;
+  }
+
   .prototype__title {
     font-size: $font-sm - 0.25em;
     margin-bottom: 10px;
@@ -104,6 +108,7 @@
     padding: 51px;
     background: rgba(0,0,0,0.1);
     color: $black;
+    text-shadow: none;
 
     .prototype__title {
       position: relative;
