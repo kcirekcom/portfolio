@@ -30,7 +30,7 @@ export default class Navbar extends Component {
               <div className='preview'>
                 Page Preview
                 <div className='preview__media'>
-                  <img src={require('../assets/screenshots/prototype-preview.png')} alt=''/>
+                  <img src={require('../assets/screenshots/prototype-preview.jpg')} alt=''/>
                 </div>
               </div>
             </NavLink>
@@ -43,7 +43,7 @@ export default class Navbar extends Component {
               <div className='preview'>
                 Page Preview
                 <div className='preview__media'>
-                  <img src={require('../assets/screenshots/development-preview.png')} alt=''/>
+                  <img src={require('../assets/screenshots/development-preview.jpg')} alt=''/>
                 </div>
               </div>
             </NavLink>
@@ -56,7 +56,7 @@ export default class Navbar extends Component {
               <div className='preview'>
                 Page Preview
                 <div className='preview__media'>
-                  <img src={require('../assets/screenshots/visualization-preview.png')} alt=''/>
+                  <img src={require('../assets/screenshots/visualization-preview.jpg')} alt=''/>
                 </div>
               </div>
             </NavLink>

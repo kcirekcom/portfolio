@@ -45,7 +45,7 @@ export default class DevelopmentModal extends Component {
       if (i === 0) {
         return (
           <div className='development' key={i}>
-            <img className='development__img' src={require(`../assets/websites/${img}/${img}-${i}.png`)} alt=''/>
+            <img className='development__img' src={require(`../assets/websites/${img}/${img}-${i}.jpg`)} alt=''/>
             <button className='btn development__btn' onClick={this.activateModal}>Learn more about this project</button>
           </div>
         )
@@ -56,7 +56,7 @@ export default class DevelopmentModal extends Component {
     var imgs = imgsArr.map((img, i) => {
       return(
         <div className={`slide ${this.state.activeKey == i ? 'slide--active': ''}`} key={i}>
-          <img className='slide__img' src={require(`../assets/websites/${img}/${img}-${i}.png`)} alt='' onClick={this.toggleClass} onKeyUp={this.toggleClass} value={i} tabIndex='0'/>
+          <img className='slide__img' src={require(`../assets/websites/${img}/${img}-${i}.jpg`)} alt='' onClick={this.toggleClass} onKeyUp={this.toggleClass} value={i} tabIndex='0'/>
         </div>
       )
     });
