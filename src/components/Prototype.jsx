@@ -8,13 +8,17 @@ export default class Prototype extends Component {
   constructor() {
     super();
     this.state = {
-      isChecked: JSON.parse(localStorage.getItem('animation')) || false
+      isChecked: false
     }
   }
 
   toggleAnimation = () => {
     localStorage.setItem('animation', !this.state.isChecked);
     this.setState({ isChecked: !this.state.isChecked });
+  }
+
+  componentDidMount() {
+    this.setState({ isChecked: JSON.parse(localStorage.getItem('animation')) });
   }
 
   render() {
