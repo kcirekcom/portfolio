@@ -3,7 +3,7 @@
 const dotenv = require('dotenv');
 const webpack = require('webpack');
 const HTMLPlugin = require('html-webpack-plugin');
-const CleanPlugin = require('clean-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -28,25 +28,25 @@ let plugins = [
     sassLoader: {
       includePaths: [`${__dirname}/src/scss`]
     }
-  })
+  }),
 ];
 
 let optimizedPlugins = [
   new CompressionPlugin({
+    test: /\.js$|\.css$|\.html$|\.jpg$|\.png$/,
     filename: '[path].gz[query]',
     algorithm: 'gzip',
-    test: /\.js$|\.css$|\.html$/,
-    threshold: 10240,
-    minRatio: 0
+    threshold: 8192,
+    minRatio: 0.8
   }),
+  new CleanWebpackPlugin(),
   new OptimizeCssAssetsPlugin({}),
-  new CleanPlugin(),
 ];
 
 module.exports = {
   mode: production ? 'production' : 'development',
   entry: './src/index.jsx',
-  devtool: production ? 'source-map' : 'eval',
+  devtool: production ? 'source-map' : 'cheap-module-source-map',
   plugins,
   optimization: {
     minimizer: optimizedPlugins,

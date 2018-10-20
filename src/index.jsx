@@ -6,7 +6,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Loadable from 'react-loadable';
 import Loader from './components/Loader.jsx';
 import Navbar from './components/Navbar.jsx';
+import Footer from './components/Footer.jsx';
 import ScrollToTop from './components/ScrollToTop.jsx';
+import './scss/main.scss';
 
 const AsyncHome = Loadable({
   loader: () => import('./components/Home.jsx'),
@@ -28,19 +30,20 @@ const AsyncDevelopment = Loadable({
   loading: Loader
 });
 
-import './scss/main.scss';
-
 render(
   <Router>
-    <ScrollToTop>
+    <div>
       <Navbar/>
-      <Switch>
-        <Route exact path='/' component={AsyncHome}/>
-        <Route exact path='/visualizations' component={AsyncVisualization}/>
-        <Route exact path='/prototypes' component={AsyncPrototype}/>
-        <Route exact path='/development' component={AsyncDevelopment}/>
-      </Switch>
-    </ScrollToTop>
+      <ScrollToTop>
+        <Switch>
+          <Route exact path='/' component={AsyncHome}/>
+          <Route exact path='/visualizations' component={AsyncVisualization}/>
+          <Route exact path='/prototypes' component={AsyncPrototype}/>
+          <Route exact path='/development' component={AsyncDevelopment}/>
+        </Switch>
+      </ScrollToTop>
+      <Footer/>
+    </div>
   </Router>,
   document.getElementById('react-src')
 );
