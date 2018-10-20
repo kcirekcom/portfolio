@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const HTMLPlugin = require('html-webpack-plugin');
 const CleanPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 dotenv.load();
@@ -31,6 +32,13 @@ let plugins = [
 ];
 
 let optimizedPlugins = [
+  new CompressionPlugin({
+    filename: '[path].gz[query]',
+    algorithm: 'gzip',
+    test: /\.js$|\.css$|\.html$/,
+    threshold: 10240,
+    minRatio: 0
+  }),
   new OptimizeCssAssetsPlugin({}),
   new CleanPlugin(),
 ];
