@@ -1,7 +1,8 @@
 h1 {
-  margin-top: 45px;
+  margin-top: 90px;
   margin-bottom: 45px;
   font-size: $font-lg - 0.75em;
+  padding-top: 25px;
 }
 
 h2 {
@@ -44,7 +45,7 @@ a {
 
   &:hover,
   &:focus {
-    background: $black;
+    background: rgba(0,0,0,0.8);
     color: $white;
   }
 }
@@ -92,5 +93,11 @@ a {
   .btn {
     background: $black;
     color: $white;
+
+    &:hover,
+    &:focus {
+      background: $black;
+      color: $white;
+    }
   }
 }
