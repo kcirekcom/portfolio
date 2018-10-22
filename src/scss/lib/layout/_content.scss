@@ -22,5 +22,15 @@ main {
 div[role="main"],
 main {
   background: $white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
   padding-bottom: 20px;
+  max-width: 1680px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1680px) {
+  div[role="main"],
+  main {
+    border-radius: 4px;
+  }
 }
