@@ -7,7 +7,7 @@ body {
   margin: 0 0 90px;
   font-family: $font-primary;
   
-  background-image: url(../../../assets/snow.jpg);
+  background-image: url(../../../assets/trianglify.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -17,4 +17,10 @@ body {
 main {
   min-height: 100%;
   width: 100%;
+}
+
+div[role="main"],
+main {
+  background: white;
+  padding-bottom: 20px;
 }
