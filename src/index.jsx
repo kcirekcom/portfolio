@@ -1,49 +1,22 @@
 'use strict';
 
-import * as React from 'react';
-import { render } from 'react-dom';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Loadable from 'react-loadable';
-import Loader from './components/Loader.jsx';
-import Navbar from './components/Navbar.jsx';
-import Footer from './components/Footer.jsx';
-import ScrollToTop from './components/ScrollToTop.jsx';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import CustomizeBackground from './components/CustomizeBackground.jsx';
 import './scss/main.scss';
 
-const AsyncHome = Loadable({
-  loader: () => import('./components/Home.jsx'),
-  loading: Loader
-});
+class App extends Component {
+  render() {
+    return(
+      <Router>
+        <CustomizeBackground/>
+      </Router>
+    )
+  }
+}
 
-const AsyncVisualization = Loadable({
-  loader: () => import('./components/Visualization.jsx'),
-  loading: Loader
-});
-
-const AsyncPrototype = Loadable({
-  loader: () => import('./components/Prototype.jsx'),
-  loading: Loader
-});
-
-const AsyncDevelopment = Loadable({
-  loader: () => import('./components/Development.jsx'),
-  loading: Loader
-});
-
-render(
-  <Router>
-    <div>
-      <Navbar/>
-      <ScrollToTop>
-        <Switch>
-          <Route exact path='/' component={AsyncHome}/>
-          <Route exact path='/visualizations' component={AsyncVisualization}/>
-          <Route exact path='/prototypes' component={AsyncPrototype}/>
-          <Route exact path='/development' component={AsyncDevelopment}/>
-        </Switch>
-      </ScrollToTop>
-      <Footer/>
-    </div>
-  </Router>,
+ReactDOM.render(
+  <App/>,
   document.getElementById('react-src')
 );

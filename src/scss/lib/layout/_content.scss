@@ -6,12 +6,6 @@ html {
 body {
   margin: 0 0 90px;
   font-family: $font-primary;
-  
-  background-image: url(../../../assets/trianglify.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 main {
@@ -21,11 +15,12 @@ main {
 
 div[role="main"],
 main {
+  position: relative;
   background: $white;
   box-shadow: 0 0 5px rgba(0,0,0,0.3);
   padding-bottom: 20px;
   max-width: 1680px;
-  margin: 0 auto;
+  margin: 0 auto 90px;
 }
 
 @media (min-width: 1680px) {
