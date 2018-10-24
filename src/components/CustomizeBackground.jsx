@@ -38,7 +38,10 @@ export default class CustomizeBackground extends Component {
   }
 
   componentDidMount() {
-    this.setState({ background: localStorage.getItem('background') });
+    let choice = localStorage.getItem('background');
+    if (choice !== null) {
+      this.setState({ background: choice });
+    }
   }
 
   showWidget = (event) => {
