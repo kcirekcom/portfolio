@@ -7,7 +7,7 @@
   margin: 15px auto;
   width: 560px;
   padding-bottom: -20px;
-  box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+  box-shadow: $box-shadow;
 
   &:hover {
     outline: rgba(0,0,0,0.1) 10px solid;
@@ -66,7 +66,7 @@
 .visual__img {
   width: 100%;
   border-radius: 4px;
-  box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+  box-shadow: $box-shadow;
 }
 
 .visual__iframe {
@@ -75,7 +75,7 @@
   height: 315px;
   margin: 15px auto;
   border-radius: 4px;
-  box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+  box-shadow: $box-shadow;
 }
 
 .slideshow {
