@@ -91,10 +91,12 @@
 
   &:nth-child(2) {
     background-image: url(../../../assets/topography.png);
+    transition-delay: 0.05s;
   }
 
   &:nth-child(3) {
     background-image: url(../../../assets/gradient.png);
+    transition-delay: 0.1s;
   }
 }
 
@@ -104,14 +106,6 @@
 
   &:first-child {
     margin-left: 0;
-  }
-  
-  &:nth-child(2) {
-    transition-delay: 0.05s;
-  }
-  
-  &:nth-child(3) {
-    transition-delay: 0.1s;
   }
 }
 
