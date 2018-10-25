@@ -94,6 +94,10 @@
   flex-grow: 1;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
   margin-bottom: 2px;
+
+  &:hover {
+    cursor: zoom-in;
+  }
 }
 
 .slide--active {
@@ -101,6 +105,10 @@
   height: 100%;
   flex-grow: 10000;
   transform: scale(1);
+  
+  &:hover {
+    cursor: default;
+  }
 }
 
 .slide__img {
@@ -108,7 +116,6 @@
   border-radius: 2px;
   box-sizing: border-box;
   border: grey 1px solid;
-  cursor: pointer;
 
   &:focus {
     outline: none;
