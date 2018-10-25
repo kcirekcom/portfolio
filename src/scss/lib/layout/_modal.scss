@@ -1,7 +1,7 @@
 .modal {
   position: relative;
   border-radius: 2px;
-  box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
+  box-shadow: $box-shadow;
   background: #FFF;
   width: 600px;
   height: 525px;

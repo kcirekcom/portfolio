@@ -17,7 +17,7 @@ div[role="main"],
 main {
   position: relative;
   background: $white;
-  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  box-shadow: $box-shadow;
   padding-bottom: 20px;
   max-width: 1680px;
   margin: 0 auto 90px;
