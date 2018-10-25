@@ -44,9 +44,9 @@ export default class DevelopmentModal extends Component {
     var banner = imgsArr.map((img, i) => {
       if (i === 0) {
         return (
-          <div className='development' key={i}>
+          <div className='development' key={i} onClick={this.activateModal}>
             <img className='development__img' src={require(`../assets/websites/${img}/${img}-${i}.jpg`)} alt=''/>
-            <button className='btn development__btn' onClick={this.activateModal}>Learn more about this project</button>
+            <button className='btn development__btn'>Learn more about this project</button>
           </div>
         )
       }

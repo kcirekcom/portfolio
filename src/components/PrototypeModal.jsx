@@ -31,10 +31,10 @@ export default class PrototypeModal extends Component {
   render() {
     return (
       <div>
-        <div className={`prototype prototype--${this.props.prototype.ref}`} tabIndex='0'>
+        <div className={`prototype prototype--${this.props.prototype.ref}`} onClick={this.activateModal} tabIndex='0'>
           <h2 className={`prototype__title ${this.props.prototype.ref}`}>{this.props.prototype.name}</h2>
           <div className='prototype__copy'>{this.props.prototype.quickCopy}</div>
-          <button className='btn prototype__btn' onClick={this.activateModal}>Learn more about this project</button>
+          <button className='btn prototype__btn'>Learn more about this project</button>
           <div className={`glare ${this.props.isChecked === true ? 'glare--off': ''}`}/>
         </div>
 
