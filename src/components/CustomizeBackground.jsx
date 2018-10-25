@@ -85,10 +85,10 @@ export default class CustomizeBackground extends Component {
 
         <div className='background-widget'>
           <div className={`background-widget__label ${this.state.hidden === false ? 'background-widget__label--expanded': ''}`} onClick={this.showWidget} onKeyUp={this.showWidget} tabIndex='0'><div className='icon-stack'/></div>
-          <div className={`background-widget__selector ${this.state.hidden === false ? 'background-widget__selector--visible': ''}`}>
-            <span value='first' onClick={this.selectBackground} onKeyUp={this.selectBackground} tabIndex='0'/>
-            <span value='second' onClick={this.selectBackground} onKeyUp={this.selectBackground} tabIndex='0'/>
-            <span value='third' onClick={this.selectBackground} onKeyUp={this.selectBackground} tabIndex='0'/>
+          <div className='background-widget__selector'>
+            <span className={`background-widget__card ${this.state.hidden === false ? 'background-widget__card--visible': ''}`} value='first' onClick={this.selectBackground} onKeyUp={this.selectBackground} tabIndex='0'/>
+            <span className={`background-widget__card ${this.state.hidden === false ? 'background-widget__card--visible': ''}`} value='second' onClick={this.selectBackground} onKeyUp={this.selectBackground} tabIndex='0'/>
+            <span className={`background-widget__card ${this.state.hidden === false ? 'background-widget__card--visible': ''}`} value='third' onClick={this.selectBackground} onKeyUp={this.selectBackground} tabIndex='0'/>
           </div>
         </div>
 
