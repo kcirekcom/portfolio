@@ -18,7 +18,10 @@ export default class Prototype extends Component {
   }
 
   componentDidMount() {
-    this.setState({ isChecked: JSON.parse(localStorage.getItem('animation')) });
+    let selection = localStorage.getItem('animation');
+    if (selection !== null) {
+      this.setState({ isChecked: JSON.parse(selection) });
+    }
   }
 
   render() {

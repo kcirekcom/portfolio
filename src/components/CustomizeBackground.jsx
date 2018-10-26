@@ -38,9 +38,9 @@ export default class CustomizeBackground extends Component {
   }
 
   componentDidMount() {
-    let choice = localStorage.getItem('background');
-    if (choice !== null) {
-      this.setState({ background: choice });
+    let selection = localStorage.getItem('background');
+    if (selection !== null) {
+      this.setState({ background: selection });
     }
   }
 
@@ -72,7 +72,7 @@ export default class CustomizeBackground extends Component {
 
   render() {
     return(
-      <div className={`background ${this.state.background}`} aria-hidden='true'>
+      <div className={`background ${this.state.background}`}>
         <Navbar {...this.state}/>
         <ScrollToTop>
           <Switch>
@@ -83,7 +83,7 @@ export default class CustomizeBackground extends Component {
           </Switch>
         </ScrollToTop>
 
-        <div className='background-widget'>
+        <div className='background-widget' aria-hidden='true'>
           <div className={`background-widget__label ${this.state.hidden === false ? 'background-widget__label--expanded': ''}`} onClick={this.showWidget} onKeyUp={this.showWidget} tabIndex='0'><div className='icon-stack'/></div>
           <div className='background-widget__selector'>
             <span className={`background-widget__card ${this.state.hidden === false ? 'background-widget__card--visible': ''}`} value='first' onClick={this.selectBackground} onKeyUp={this.selectBackground} tabIndex='0'/>
