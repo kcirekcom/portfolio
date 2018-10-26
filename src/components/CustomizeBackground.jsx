@@ -38,9 +38,9 @@ export default class CustomizeBackground extends Component {
   }
 
   componentDidMount() {
-    let choice = localStorage.getItem('background');
-    if (choice !== null) {
-      this.setState({ background: choice });
+    let selection = localStorage.getItem('background');
+    if (selection !== null) {
+      this.setState({ background: selection });
     }
   }
 
