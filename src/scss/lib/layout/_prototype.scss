@@ -51,6 +51,7 @@
 
 .prototype:hover, 
 .prototype:focus {
+  outline: none;
   padding: 42px 15px;
   color: $white;
   text-shadow: 1px 1px 3px #212121;

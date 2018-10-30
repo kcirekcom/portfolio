@@ -83,12 +83,12 @@ export default class CustomizeBackground extends Component {
           </Switch>
         </ScrollToTop>
 
-        <div className='background-widget' aria-hidden='true'>
+        <div className='background-widget' aria-label='Background selector of site with 3 options'>
           <div className={`background-widget__label ${this.state.hidden === false ? 'background-widget__label--expanded': ''}`} onClick={this.showWidget} onKeyUp={this.showWidget} tabIndex='0'><div className='icon-stack'/></div>
           <div className='background-widget__selector'>
-            <span className={`background-widget__card ${this.state.hidden === false ? 'background-widget__card--visible': ''}`} value='first' onClick={this.selectBackground} onKeyUp={this.selectBackground} tabIndex='0'/>
-            <span className={`background-widget__card ${this.state.hidden === false ? 'background-widget__card--visible': ''}`} value='second' onClick={this.selectBackground} onKeyUp={this.selectBackground} tabIndex='0'/>
-            <span className={`background-widget__card ${this.state.hidden === false ? 'background-widget__card--visible': ''}`} value='third' onClick={this.selectBackground} onKeyUp={this.selectBackground} tabIndex='0'/>
+            <span className={`background-widget__card ${this.state.hidden === false ? 'background-widget__card--visible': ''}`} aria-label='Option 1: Triangulated SVG background pattern with a light orange to magenta to white gradient overlay that spans from top left to bottom right' value='first' onClick={this.selectBackground} onKeyUp={this.selectBackground} tabIndex='0'/>
+            <span className={`background-widget__card ${this.state.hidden === false ? 'background-widget__card--visible': ''}`} aria-label='Option 2: Topographical SVG background pattern with a dark purple to yellow gradient overlay that spans from left to right' value='second' onClick={this.selectBackground} onKeyUp={this.selectBackground} tabIndex='0'/>
+            <span className={`background-widget__card ${this.state.hidden === false ? 'background-widget__card--visible': ''}`} aria-label='Option 3: Light green to light blue gradient background that spans from left to right' value='third' onClick={this.selectBackground} onKeyUp={this.selectBackground} tabIndex='0'/>
           </div>
         </div>
 
