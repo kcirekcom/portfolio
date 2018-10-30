@@ -24,6 +24,7 @@
 
   &:hover,
   &:focus {
+    outline: none;
     background: rgba(0,0,0,0.8);
     box-shadow: $box-shadow;
     color: $white;
@@ -93,6 +94,7 @@
 
     &:hover,
     &:focus {
+      outline: none;
       background: rgba(0,0,0,0.8);
       color: $white;
       box-shadow: $box-shadow;
@@ -160,11 +162,8 @@
       padding-right: 35px;
       font-size: 30px;
 
-      &:hover
       &:focus {
-        cursor: pointer;
-        background: $white;
-        color: $black;
+        outline: none;
       }
     }
   }

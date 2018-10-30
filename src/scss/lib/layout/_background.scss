@@ -33,8 +33,9 @@
 }
 
 .background-widget__label {
-  color: $white;
-  background: rgba(0,0,0,0.8);
+  background: $white;
+  color: $black;
+  border-radius: 4px;
   box-shadow: $box-shadow;
   width: 30px;
   height: 30px;
@@ -49,8 +50,12 @@
     margin-right: 20px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
+    outline: none;
     cursor: pointer;
+    background: rgba(0,0,0,0.8);
+    color: $white;
   }
 }
 
@@ -75,7 +80,7 @@
   background-position: center center;
   background-size: cover;
   border-radius: 4px;
-  box-shadow: $box-shadow;
+  box-shadow: $box-shadow-thin;
   width: 50px;
   height: 50px;
   margin-left: -50px;
@@ -98,6 +103,12 @@
     background-image: url(../../../assets/gradient.png);
     transition-delay: 0.1s;
   }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: $box-shadow-thick;
+  }
 }
 
 .background-widget__card--visible {
@@ -110,9 +121,14 @@
 }
 
 @media (max-width: 650px) {
-  .background-widget  {
+  .background-widget {
     top: 90px;
     left: 20px;
+  }
+
+  .background-widget__label {
+    background: rgba(0,0,0,0.8);
+    color: $white;
   }
 
   .background-widget__selector {
@@ -121,12 +137,18 @@
   }
 
   .background-widget__card {
+    box-shadow: $box-shadow;
     margin-left: 0;
     margin-top: -50px;
     transition: margin-top 0.5s ease-in-out, left 0.5s ease-in-out;
 
     &:first-child {
       margin-top: 0;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: $box-shadow;
     }
   }
 

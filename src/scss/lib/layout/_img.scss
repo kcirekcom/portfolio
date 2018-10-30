@@ -58,6 +58,12 @@
   &:visited {
     color: $white;
   }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background: blue;
+  }
 }
 
 .visual__link--ca {
