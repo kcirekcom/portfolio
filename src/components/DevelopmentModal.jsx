@@ -55,7 +55,7 @@ export default class DevelopmentModal extends Component {
 
     var imgs = imgsArr.map((img, i) => {
       return(
-        <div className={`slide ${this.state.activeKey == i ? 'slide--active': ''}`} aria-hidden='true' key={i}>
+        <div className={`slide ${this.state.activeKey == i ? 'slide--active': ''}`} key={i}>
           <img className='slide__img' src={require(`../assets/websites/${img}/${img}-${i}.jpg`)} alt='' onClick={this.toggleClass} onKeyUp={this.toggleClass} value={i} tabIndex='0'/>
         </div>
       )
@@ -88,7 +88,7 @@ export default class DevelopmentModal extends Component {
                 </h2>
               </div>
 
-              <div className='slideshow' aria-label={`Slideshow of screenshots for this ${this.props.development.name} project`}>
+              <div className='slideshow' aria-hidden='true'>
                 {imgs}
               </div>
 
