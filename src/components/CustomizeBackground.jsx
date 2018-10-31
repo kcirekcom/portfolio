@@ -83,7 +83,7 @@ export default class CustomizeBackground extends Component {
           </Switch>
         </ScrollToTop>
 
-        <div className='background-widget' aria-label='Background selector of site with 3 options'>
+        <div className='background-widget' aria-label={`Background selector of site with 3 options: ${this.state.background} option currently selected`}>
           <div className={`background-widget__label ${this.state.hidden === false ? 'background-widget__label--expanded': ''}`} onClick={this.showWidget} onKeyUp={this.showWidget} tabIndex='0'><div className='icon-stack'/></div>
           <div className='background-widget__selector'>
             <span className={`background-widget__card ${this.state.hidden === false ? 'background-widget__card--visible': ''}`} aria-label='Option 1: Triangulated SVG background pattern with a light orange to magenta to white gradient overlay that spans from top left to bottom right' value='first' onClick={this.selectBackground} onKeyUp={this.selectBackground} tabIndex='0'/>
