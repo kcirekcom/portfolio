@@ -8,11 +8,6 @@ body {
   font-family: $font-primary;
 }
 
-main {
-  min-height: 100%;
-  width: 100%;
-}
-
 div[role="main"],
 main {
   position: relative;

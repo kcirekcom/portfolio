@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 export default class Visualization extends Component {
   render() {
     return (
-      <div role='main'>
+      <main role='main'>
         <h1 className='text-center'>
           Data Visualizations
         </h1>
@@ -45,7 +45,7 @@ export default class Visualization extends Component {
             <iframe className='visual__iframe' src='https://www.youtube.com/embed/V3voeljivNs' frameBorder='0' allowFullScreen></iframe>
           </div>
         </div>
-      </div>
+      </main>
     )
   }
 }

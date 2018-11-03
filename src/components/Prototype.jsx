@@ -28,7 +28,7 @@ export default class Prototype extends Component {
     var prototypes = modals.map((d, i) => (d.category === 'prototype' ? <PrototypeModal {...this.state} prototype={d} key={i}/> : null));
 
     return (
-      <div role='main'>
+      <main role='main'>
         <h1 className='text-center'>
           Animated Prototypes
         </h1>
@@ -41,7 +41,7 @@ export default class Prototype extends Component {
         </div>
 
         {prototypes}
-      </div>
+      </main>
     )
   }
 }
