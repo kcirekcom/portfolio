@@ -9,13 +9,13 @@ export default class Development extends Component {
     var developments = modals.map((d, i) => (d.category === 'development' ? <DevelopmentModal development={d} key={i}/> : null));
 
     return (
-      <div role='main'>
+      <main role='main'>
         <h1 className='text-center'>
           Software Development
         </h1>
 
         {developments}
-      </div>
+      </main>
     )
   }
 }
