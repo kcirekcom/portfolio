@@ -28,7 +28,7 @@ export default class Prototype extends Component {
     var prototypes = modals.map((d, i) => (d.category === 'prototype' ? <PrototypeModal {...this.state} prototype={d} key={i}/> : null));
 
     return (
-      <main role='main'>
+      <main className='card' role='main'>
         <h1 className='text-center'>
           Animated Prototypes
         </h1>

@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 export default class Visualization extends Component {
   render() {
     return (
-      <main role='main'>
+      <main className='card' role='main'>
         <h1 className='text-center'>
           Data Visualizations
         </h1>
