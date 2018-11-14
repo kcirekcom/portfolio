@@ -1,10 +1,17 @@
-.about-info {
+.card {
+  background: $white;
+  box-shadow: $box-shadow;
+  padding-bottom: 20px;
+  margin: 0 auto 90px;
+}
+
+.card--about {
   width: 40%;
   max-width: 672px;
-  margin: 90px auto 0;
   line-height: 25px;
   border-radius: 4px;
   box-shadow: $box-shadow;
+  margin-bottom: 0;
 
   p {
     padding: 0 25px;
@@ -37,9 +44,8 @@
 }
 
 @media (max-width: 900px) {
-  .about-info {
+  .card--about {
     width: 75%;
-    margin: 200px auto;
   }
 
   .social__link a {
@@ -48,9 +54,8 @@
   }
 }
 
-@media (max-width: 550px) {
-  .about-info {
-    width: 75%;
-    margin: 120px auto 0;
+@media (min-width: 1680px) {
+  .card {
+    border-radius: 4px;
   }
 }

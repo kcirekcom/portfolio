@@ -5,8 +5,6 @@ import { Switch, Route } from 'react-router-dom';
 import Loadable from 'react-loadable';
 import Loader from './Loader.jsx';
 import Navbar from './Navbar.jsx';
-import Footer from './Footer.jsx';
-import ScrollToTop from './ScrollToTop.jsx';
 
 const AsyncHome = Loadable({
   loader: () => import('./Home.jsx'),
@@ -73,14 +71,13 @@ export default class CustomizeBackground extends Component {
   render() {
     return(
       <div className={`background ${this.state.background}`}>
-        <ScrollToTop>
-          <Switch>
-            <Route exact path='/' component={AsyncHome}/>
-            <Route exact path='/visualizations' component={AsyncVisualization}/>
-            <Route exact path='/prototypes' component={AsyncPrototype}/>
-            <Route exact path='/development' component={AsyncDevelopment}/>
-          </Switch>
-        </ScrollToTop>
+        <Navbar {...this.state}/>
+        <Switch>
+          <Route exact path='/' component={AsyncHome}/>
+          <Route exact path='/visualizations' component={AsyncVisualization}/>
+          <Route exact path='/prototypes' component={AsyncPrototype}/>
+          <Route exact path='/development' component={AsyncDevelopment}/>
+        </Switch>
         <div className='background-widget' aria-label={`Background selector of site with 3 options: ${this.state.background} option currently selected`}>
           <div className={`background-widget__label ${this.state.hidden === false ? 'background-widget__label--expanded': ''}`} onClick={this.showWidget} onKeyUp={this.showWidget} tabIndex='0'><div className='icon-stack'/></div>
           <div className='background-widget__selector'>
@@ -89,8 +86,6 @@ export default class CustomizeBackground extends Component {
             <span className={`background-widget__card ${this.state.hidden === false ? 'background-widget__card--visible': ''}`} aria-label='Option 3: Light green to light blue gradient background that spans from left to right' value='third' onClick={this.selectBackground} onKeyUp={this.selectBackground} tabIndex='0'/>
           </div>
         </div>
-        <Navbar {...this.state}/>
-        <Footer/>
       </div>
     )
   }

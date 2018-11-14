@@ -9,7 +9,7 @@ export default class Navbar extends Component {
       <nav role='navigation'>
         <p className='nav-brand name'>
           <NavLink to='/'>
-            Erick F. Mock
+            © Erick F. Mock
           </NavLink>
         </p>
 
