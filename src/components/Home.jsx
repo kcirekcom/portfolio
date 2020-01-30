@@ -8,10 +8,10 @@ export default class Home extends Component {
       <main className='card card--about' role='main'>
         <h1 className='text-center'>Welcome</h1>
 
-        <p>My name is Erick Mock, and I'm a web developer and designer. I have a certificate in advanced software development in full stack JavaScript along with a degree in psychology. I enjoy working with design software and web technologies to develop components that enhance the user experience and accessibility of creative platforms and interfaces.</p>
+        <p>I'm a web developer and designer. I have a certificate in advanced software development in full stack JavaScript along with a degree in psychology. I enjoy working with design software and web technologies to develop components that enhance the user experience and accessibility of platforms and interfaces. I’m always eager to push better products forward that simplify and improve the day-to-day processes for all users.</p>
 
         <ul className='social'>
-          <li className='social__link'><a href='https://github.com/kcirekcom' target='_blank' className='icon-github'/></li>
+          {/* <li className='social__link'><a href='https://github.com/kcirekcom' target='_blank' className='icon-github'/></li> */}
           <li className='social__link'><a href='https://www.linkedin.com/in/erick-mock' target='_blank' className='icon-linkedin'/></li>
           <li className='social__link'><a href='mailto:erick.f.mock@gmail.com?Subject=Collaboration' className='icon-envelop'/></li>
         </ul>
