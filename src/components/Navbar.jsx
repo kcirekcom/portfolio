@@ -9,7 +9,7 @@ export default class Navbar extends Component {
       <nav role='navigation'>
         <p className='nav-brand name'>
           <NavLink to='/'>
-            © Erick F. Mock
+            Erick F. Mock
           </NavLink>
         </p>
 
@@ -29,8 +29,8 @@ export default class Navbar extends Component {
 
               <div className='preview'>
                 Page Preview
-                <div className={`preview__media background ${this.props.background}`}>
-                  <img src={require('../assets/screenshots/prototype-preview-tri.png')} alt=''/>
+                <div className='preview__media' aria-hidden='true'>
+                  <iframe id="preview-frame" src="http://www.erickfmock.com/prototypes"></iframe>
                 </div>
               </div>
             </NavLink>
@@ -42,8 +42,8 @@ export default class Navbar extends Component {
 
               <div className='preview'>
                 Page Preview
-                <div className={`preview__media background ${this.props.background}`}>
-                  <img src={require('../assets/screenshots/development-preview-tri.png')} alt=''/>
+                <div className='preview__media' aria-hidden='true'>
+                  <iframe id="preview-frame" src="http://www.erickfmock.com/development"></iframe>
                 </div>
               </div>
             </NavLink>
@@ -55,8 +55,8 @@ export default class Navbar extends Component {
 
               <div className='preview'>
                 Page Preview
-                <div className={`preview__media background ${this.props.background}`}>
-                  <img src={require('../assets/screenshots/visualization-preview-tri.png')} alt=''/>
+                <div className='preview__media' aria-hidden='true'>
+                  <iframe id="preview-frame" src="http://www.erickfmock.com/visualizations"></iframe>
                 </div>
               </div>
             </NavLink>
