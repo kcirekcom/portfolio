@@ -114,6 +114,10 @@
   display: none;
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
 @media (max-width: 1050px) {
   .navigation {
     right: 35px;

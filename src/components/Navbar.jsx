@@ -4,6 +4,13 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default class Navbar extends Component {
+  setPointerEvents = (event) => {
+    event.persist();
+    // temp
+    let child = event.target.contentDocument.document.getElementsByTagName('main')[0];
+    child.classList.add('pointer-events-none');
+  }
+
   render() {
     return (
       <nav role='navigation'>
@@ -27,10 +34,10 @@ export default class Navbar extends Component {
             <NavLink activeClassName='is-active' className='navigation__link' to='/prototypes'>
               Prototypes
 
-              <div className='preview'>
+              <div className='preview' aria-hidden="true">
                 Page Preview
-                <div className='preview__media' aria-hidden='true'>
-                  <iframe id="preview-frame" src="http://www.erickfmock.com/prototypes"></iframe>
+                <div className='preview__media'>
+                  <iframe id="preview-frame" src="http://www.erickfmock.com/prototypes" onMouseOver={this.setPointerEvents}></iframe>
                 </div>
               </div>
             </NavLink>
@@ -40,9 +47,9 @@ export default class Navbar extends Component {
             <NavLink activeClassName='is-active' className='navigation__link' to='/development'>
               Development
 
-              <div className='preview'>
+              <div className='preview' aria-hidden="true">
                 Page Preview
-                <div className='preview__media' aria-hidden='true'>
+                <div className='preview__media'>
                   <iframe id="preview-frame" src="http://www.erickfmock.com/development"></iframe>
                 </div>
               </div>
@@ -53,9 +60,9 @@ export default class Navbar extends Component {
             <NavLink activeClassName='is-active' className='navigation__link' to='/visualizations'>
               Visualizations
 
-              <div className='preview'>
+              <div className='preview' aria-hidden="true">
                 Page Preview
-                <div className='preview__media' aria-hidden='true'>
+                <div className='preview__media'>
                   <iframe id="preview-frame" src="http://www.erickfmock.com/visualizations"></iframe>
                 </div>
               </div>
