@@ -33,10 +33,10 @@ export default class Navbar extends Component {
             <NavLink activeClassName='is-active' className='navigation__link' to='/prototypes'>
               Prototypes
 
-              <div className='preview' aria-hidden="true">
+              <div className='preview' aria-hidden='true'>
                 Page Preview
                 <div className='preview__media'>
-                  <iframe id="preview-frame" src="http://www.erickfmock.com/prototypes" onMouseOver={this.setPointerEvents}></iframe>
+                  <iframe id='preview-frame' sandbox='allow-same-origin' src='http://www.erickfmock.com/prototypes' onMouseOver={this.setPointerEvents}></iframe>
                 </div>
               </div>
             </NavLink>
@@ -46,10 +46,10 @@ export default class Navbar extends Component {
             <NavLink activeClassName='is-active' className='navigation__link' to='/development'>
               Development
 
-              <div className='preview' aria-hidden="true">
+              <div className='preview' aria-hidden='true'>
                 Page Preview
                 <div className='preview__media'>
-                  <iframe id="preview-frame" src="http://www.erickfmock.com/development" onMouseOver={this.setPointerEvents}></iframe>
+                  <iframe id='preview-frame' sandbox='allow-same-origin' src='http://www.erickfmock.com/development' onMouseOver={this.setPointerEvents}></iframe>
                 </div>
               </div>
             </NavLink>
@@ -59,10 +59,10 @@ export default class Navbar extends Component {
             <NavLink activeClassName='is-active' className='navigation__link' to='/visualizations'>
               Visualizations
 
-              <div className='preview' aria-hidden="true">
+              <div className='preview' aria-hidden='true'>
                 Page Preview
                 <div className='preview__media'>
-                  <iframe id="preview-frame" src="http://www.erickfmock.com/visualizations" onMouseOver={this.setPointerEvents}></iframe>
+                  <iframe id='preview-frame' sandbox='allow-same-origin' src='http://www.erickfmock.com/visualizations' onMouseOver={this.setPointerEvents}></iframe>
                 </div>
               </div>
             </NavLink>
