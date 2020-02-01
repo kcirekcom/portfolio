@@ -4,12 +4,19 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default class Navbar extends Component {
+  setPointerEvents = (event) => {
+    event.persist();
+    // temp
+    let child = event.target.contentDocument.document.getElementsByTagName('main')[0];
+    child.classList.add('pointer-events-none');
+  }
+
   render() {
     return (
       <nav role='navigation'>
         <p className='nav-brand name'>
           <NavLink to='/'>
-            © Erick F. Mock
+            Erick F. Mock
           </NavLink>
         </p>
 
@@ -27,10 +34,10 @@ export default class Navbar extends Component {
             <NavLink activeClassName='is-active' className='navigation__link' to='/prototypes'>
               Prototypes
 
-              <div className='preview'>
+              <div className='preview' aria-hidden="true">
                 Page Preview
-                <div className={`preview__media background ${this.props.background}`}>
-                  <img src={require('../assets/screenshots/prototype-preview-tri.png')} alt=''/>
+                <div className='preview__media'>
+                  <iframe id="preview-frame" src="http://www.erickfmock.com/prototypes" onMouseOver={this.setPointerEvents}></iframe>
                 </div>
               </div>
             </NavLink>
@@ -40,10 +47,10 @@ export default class Navbar extends Component {
             <NavLink activeClassName='is-active' className='navigation__link' to='/development'>
               Development
 
-              <div className='preview'>
+              <div className='preview' aria-hidden="true">
                 Page Preview
-                <div className={`preview__media background ${this.props.background}`}>
-                  <img src={require('../assets/screenshots/development-preview-tri.png')} alt=''/>
+                <div className='preview__media'>
+                  <iframe id="preview-frame" src="http://www.erickfmock.com/development"></iframe>
                 </div>
               </div>
             </NavLink>
@@ -53,10 +60,10 @@ export default class Navbar extends Component {
             <NavLink activeClassName='is-active' className='navigation__link' to='/visualizations'>
               Visualizations
 
-              <div className='preview'>
+              <div className='preview' aria-hidden="true">
                 Page Preview
-                <div className={`preview__media background ${this.props.background}`}>
-                  <img src={require('../assets/screenshots/visualization-preview-tri.png')} alt=''/>
+                <div className='preview__media'>
+                  <iframe id="preview-frame" src="http://www.erickfmock.com/visualizations"></iframe>
                 </div>
               </div>
             </NavLink>
