@@ -6,10 +6,8 @@ import { NavLink } from 'react-router-dom';
 export default class Navbar extends Component {
   setPointerEvents = (event) => {
     event.persist();
-    // temp
-    console.log(event.target.contentDocument);
-    let child = event.target.contentDocument.getElementsByTagName('main')[0];
-    child.classList.add('pointer-events-none');
+    let iframeMain = event.target.contentDocument.getElementsByTagName('main')[0];
+    iframeMain.classList.add('pointer-events-none');
   }
 
   render() {
@@ -51,7 +49,7 @@ export default class Navbar extends Component {
               <div className='preview' aria-hidden="true">
                 Page Preview
                 <div className='preview__media'>
-                  <iframe id="preview-frame" src="http://www.erickfmock.com/development"></iframe>
+                  <iframe id="preview-frame" src="http://www.erickfmock.com/development" onMouseOver={this.setPointerEvents}></iframe>
                 </div>
               </div>
             </NavLink>
@@ -64,7 +62,7 @@ export default class Navbar extends Component {
               <div className='preview' aria-hidden="true">
                 Page Preview
                 <div className='preview__media'>
-                  <iframe id="preview-frame" src="http://www.erickfmock.com/visualizations"></iframe>
+                  <iframe id="preview-frame" src="http://www.erickfmock.com/visualizations" onMouseOver={this.setPointerEvents}></iframe>
                 </div>
               </div>
             </NavLink>
