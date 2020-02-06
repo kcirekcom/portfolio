@@ -17,7 +17,7 @@ export default class Navbar extends Component {
     let iframeSrc = `http://www.erickfmock.com${path}`;
     iframe.setAttribute('id', 'preview-frame');
     iframe.setAttribute('src', `${iframeSrc}`);
-    iframe.addEventListener('mouseover', this.setPointerEvents);
+    iframe.addEventListener('mouseover', setPointerEvents, false);
     if (event.target.children[0].children.length === 0) {
       event.target.children[0].appendChild(iframe);
     }
