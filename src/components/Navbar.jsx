@@ -4,12 +4,6 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default class Navbar extends Component {
-  setPointerEvents = (event) => {
-    event.persist();
-    let iframeMain = event.target.contentDocument.getElementsByTagName('main')[0];
-    iframeMain.classList.add('pointer-events-none');
-  }
-
   setPreviewFrame = (event) => {
     event.persist();
     let iframe = document.createElement('iframe');
@@ -17,10 +11,15 @@ export default class Navbar extends Component {
     let iframeSrc = `http://www.erickfmock.com${path}`;
     iframe.setAttribute('id', 'preview-frame');
     iframe.setAttribute('src', `${iframeSrc}`);
-    iframe.addEventListener('mouseover', setPointerEvents, false);
     if (event.target.children[0].children.length === 0) {
       event.target.children[0].appendChild(iframe);
     }
+  }
+
+  setPointerEvents = (event) => {
+    event.persist();
+    let iframeMain = event.target.children[0].contentDocument.getElementsByTagName('main')[0];
+    iframeMain.classList.add('pointer-events-none');
   }
   
   render() {
@@ -46,9 +45,9 @@ export default class Navbar extends Component {
             <NavLink activeClassName='is-active' className='navigation__link' to='/prototypes'>
               Prototypes
 
-              <div className='preview' aria-hidden='true' onMouseOver={this.setPreviewFrame}>
+              <div className='preview' aria-hidden='true' onMouseEnter={this.setPreviewFrame}>
                 Page Preview
-                <div className='preview__media' />
+                <div className='preview__media' onMouseEnter={this.setPointerEvents} />
               </div>
             </NavLink>
           </li>
@@ -57,9 +56,9 @@ export default class Navbar extends Component {
             <NavLink activeClassName='is-active' className='navigation__link' to='/development'>
               Development
 
-              <div className='preview' aria-hidden='true' onMouseOver={this.setPreviewFrame}>
+              <div className='preview' aria-hidden='true' onMouseEnter={this.setPreviewFrame}>
                 Page Preview
-                <div className='preview__media' />
+                <div className='preview__media' onMouseEnter={this.setPointerEvents} />
               </div>
             </NavLink>
           </li>
@@ -68,9 +67,9 @@ export default class Navbar extends Component {
             <NavLink activeClassName='is-active' className='navigation__link' to='/visualizations'>
               Visualizations
 
-              <div className='preview' aria-hidden='true' onMouseOver={this.setPreviewFrame}>
+              <div className='preview' aria-hidden='true' onMouseEnter={this.setPreviewFrame}>
                 Page Preview
-                <div className='preview__media' />
+                <div className='preview__media' onMouseEnter={this.setPointerEvents} />
               </div>
             </NavLink>
           </li>
