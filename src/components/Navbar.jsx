@@ -10,6 +10,19 @@ export default class Navbar extends Component {
     iframeMain.classList.add('pointer-events-none');
   }
 
+  setPreviewFrame = (event) => {
+    event.persist();
+    let iframe = document.createElement('iframe');
+    let path = event.target.parentElement.pathname;
+    let iframeSrc = `http://www.erickfmock.com${path}`;
+    iframe.setAttribute('id', 'preview-frame');
+    iframe.setAttribute('src', `${iframeSrc}`);
+    iframe.addEventListener('mouseover', this.setPointerEvents);
+    if (event.target.children[0].children.length === 0) {
+      event.target.children[0].appendChild(iframe);
+    }
+  }
+  
   render() {
     return (
       <nav role='navigation'>
@@ -33,11 +46,9 @@ export default class Navbar extends Component {
             <NavLink activeClassName='is-active' className='navigation__link' to='/prototypes'>
               Prototypes
 
-              <div className='preview' aria-hidden='true'>
+              <div className='preview' aria-hidden='true' onMouseOver={this.setPreviewFrame}>
                 Page Preview
-                <div className='preview__media'>
-                  <iframe id='preview-frame' src='http://www.erickfmock.com/prototypes' onMouseOver={this.setPointerEvents}></iframe>
-                </div>
+                <div className='preview__media' />
               </div>
             </NavLink>
           </li>
@@ -46,11 +57,9 @@ export default class Navbar extends Component {
             <NavLink activeClassName='is-active' className='navigation__link' to='/development'>
               Development
 
-              <div className='preview' aria-hidden='true'>
+              <div className='preview' aria-hidden='true' onMouseOver={this.setPreviewFrame}>
                 Page Preview
-                <div className='preview__media'>
-                  <iframe id='preview-frame' src='http://www.erickfmock.com/development' onMouseOver={this.setPointerEvents}></iframe>
-                </div>
+                <div className='preview__media' />
               </div>
             </NavLink>
           </li>
@@ -59,11 +68,9 @@ export default class Navbar extends Component {
             <NavLink activeClassName='is-active' className='navigation__link' to='/visualizations'>
               Visualizations
 
-              <div className='preview' aria-hidden='true'>
+              <div className='preview' aria-hidden='true' onMouseOver={this.setPreviewFrame}>
                 Page Preview
-                <div className='preview__media'>
-                  <iframe id='preview-frame' src='http://www.erickfmock.com/visualizations' onMouseOver={this.setPointerEvents}></iframe>
-                </div>
+                <div className='preview__media' />
               </div>
             </NavLink>
           </li>
